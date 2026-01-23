@@ -1,0 +1,20 @@
+# RANSTRUCT 依赖
+# 针对 RTX 4080 (16GB) 优化
+
+# 核心依赖
+numpy>=1.21.0
+pyyaml>=6.0
+
+# Ollama Python 客户端
+ollama>=0.1.0
+
+# 向量存储 (GPU 版本)
+faiss-gpu>=1.7.0  # 使用 GPU 加速相似性搜索
+
+# 嵌入模型 (GPU 加速)
+sentence-transformers>=2.2.0
+torch>=2.0.0  # 自动使用 CUDA
+
+# 可选依赖
+tqdm>=4.64.0  # 进度条
+accelerate>=0.20.0  # 模型加速

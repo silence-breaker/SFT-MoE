@@ -1,0 +1,137 @@
+# RANSTRUCT 配置文件
+# O-RAN 领域数据集生成框架
+
+# 模型配置
+model:
+  # Ollama 服务地址
+  ollama_base_url: "http://localhost:11434"
+  ollama_models_path: "D:/Ollama/Models"
+  
+  # 问题生成模型 (Mistral)
+  question_model: "mistral:latest"
+  question_model_temperature: 0.7
+  question_model_top_p: 0.9
+  
+  # 答案生成模型 (Qwen-2.5)
+  answer_model: "qwen2.5:1.5b"
+  answer_model_temperature: 0.3
+  answer_model_top_p: 0.9
+  
+  # 嵌入模型 (BGE-Small-EN-1.5)
+  embedding_model: "bge-small-en-v1.5"
+  embedding_dimension: 384
+
+# 文本分块配置
+chunk:
+  # RAG Chunks - 用于检索 (1024 tokens)
+  rag_chunk_size: 1024
+  rag_chunk_overlap: 128
+  
+  # LTG Chunks - 用于问题生成 (4096 tokens)
+  ltg_chunk_size: 4096
+  ltg_chunk_overlap: 256
+  
+  # 分块分隔符（按优先级排序）
+  separators:
+    - "\n\n"   # 段落
+    - "\n"     # 行
+    - "。"     # 中文句号
+    - "."      # 英文句号
+    - " "      # 空格
+    - ""       # 字符
+
+# 数据源配置
+data_source:
+  # 基础路径（相对于项目根目录）
+  # base_path 会自动设置
+  
+  # O-RAN 规范文档路径
+  # oran_spec_path: "datasource/ORAN_Specification"
+  
+  # srsRAN 代码路径
+  # srsran_code_path: "srsRAN_Project"
+  
+  # 代码集路径
+  # codeset_path: "datasource/codeset"
+  
+  # FAISS 索引路径
+  # faiss_index_path: "datasource/FAISS-v2.0"
+  
+  # 支持的文件扩展名
+  spec_extensions:
+    - ".md"
+    - ".txt"
+    - ".rst"
+  
+  code_extensions:
+    - ".cpp"
+    - ".h"
+    - ".hpp"
+    - ".c"
+    - ".cc"
+
+# FAISS 配置 (针对 RTX 4080 16GB 优化)
+faiss:
+  # 检索返回的 Top-K 结果
+  top_k: 3
+  
+  # 索引类型: "flat", "ivf", "hnsw"
+  # GPU 加速对 flat 索引效果最好
+  index_type: "flat"
+  
+  # IVF 索引参数 (大数据集使用)
+  nlist: 100
+  nprobe: 10
+  
+  # HNSW 索引参数
+  hnsw_m: 32
+  hnsw_ef_construction: 200
+  hnsw_ef_search: 100
+
+# 生成配置
+generation:
+  # 每个 LTG chunk 生成的问题数量
+  questions_per_chunk: 5
+  
+  # 最大重试次数
+  max_retries: 3
+  
+  # 批处理大小
+  batch_size: 10
+  
+  # 是否启用去重
+  enable_deduplication: true
+  
+  # 问题长度限制
+  min_question_length: 10
+  max_question_length: 500
+  
+  # 答案长度限制
+  min_answer_length: 50
+  max_answer_length: 2000
+
+# 输出配置
+output:
+  # 输出目录
+  output_dir: "output"
+  
+  # 数据集文件名
+  dataset_filename: "ranstruct_dataset.jsonl"
+  
+  # 保存中间结果
+  save_intermediate: true
+  questions_filename: "generated_questions.jsonl"
+  
+  # 日志配置
+  log_level: "INFO"
+  log_file: "ranstruct.log"
+
+# 全局设置 (针对 RTX 4080 16GB 优化)
+random_seed: 42
+num_workers: 4
+device: "cuda"  # RTX 4080 - 使用 CUDA 加速
+
+# GPU 配置说明:
+# - Ollama 模型推理: 自动使用 GPU (由 Ollama 管理)
+# - 嵌入模型 (BGE): 使用 PyTorch CUDA
+# - FAISS 搜索: 使用 faiss-gpu 加速
