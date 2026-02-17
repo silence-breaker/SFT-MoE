@@ -83,18 +83,41 @@ class QAPair:
             "metadata": self.metadata
         }
     
+    # O-RAN 专家系统提示 (用于 SFT 训练)
+    SYSTEM_PROMPT_FOR_TRAINING = """You are an O-RAN Technical Expert with comprehensive knowledge of Open RAN architecture, 3GPP specifications, and telecommunications systems. Provide accurate, detailed, and technically precise answers about O-RAN components, interfaces, protocols, and implementations."""
+    
     def to_training_format(self) -> Dict:
-        """转换为训练格式（指令微调格式）"""
+        """转换为训练格式（Alpaca 指令微调格式）"""
         return {
             "instruction": self.question,
             "input": "",
             "output": self.answer
         }
     
+    def to_training_format_with_system(self) -> Dict:
+        """转换为带系统提示的训练格式（推荐用于专业领域 SFT）"""
+        return {
+            "system": self.SYSTEM_PROMPT_FOR_TRAINING,
+            "instruction": self.question,
+            "input": "",
+            "output": self.answer
+        }
+    
     def to_conversation_format(self) -> Dict:
-        """转换为对话格式"""
+        """转换为对话格式（ShareGPT/OpenAI 格式）"""
         return {
             "conversations": [
+                {"role": "system", "content": self.SYSTEM_PROMPT_FOR_TRAINING},
+                {"role": "user", "content": self.question},
+                {"role": "assistant", "content": self.answer}
+            ]
+        }
+    
+    def to_chatml_format(self) -> Dict:
+        """转换为 ChatML 格式（适用于 Qwen、Llama-3 等模型 SFT）"""
+        return {
+            "messages": [
+                {"role": "system", "content": self.SYSTEM_PROMPT_FOR_TRAINING},
                 {"role": "user", "content": self.question},
                 {"role": "assistant", "content": self.answer}
             ]
@@ -945,7 +968,13 @@ class DatasetBuilder:
         
         Args:
             qa_pairs: 问答对列表
-            format: 输出格式 ("jsonl", "json", "training", "conversation")
+            format: 输出格式 
+                - "jsonl": 原始格式，包含所有元数据（用于调试/分析）
+                - "json": JSON数组格式
+                - "training": Alpaca格式 (instruction/input/output)
+                - "training_system": 带系统提示的Alpaca格式（推荐）
+                - "conversation": ShareGPT对话格式
+                - "chatml": ChatML格式（适用于Qwen/Llama-3等模型SFT）
             filepath: 输出文件路径
         """
         if filepath is None:
@@ -959,10 +988,14 @@ class DatasetBuilder:
             self._save_json(qa_pairs, filepath)
         elif format == "training":
             self._save_training_format(qa_pairs, filepath)
+        elif format == "training_system":
+            self._save_training_format_with_system(qa_pairs, filepath)
         elif format == "conversation":
             self._save_conversation_format(qa_pairs, filepath)
+        elif format == "chatml":
+            self._save_chatml_format(qa_pairs, filepath)
         else:
-            raise ValueError(f"不支持的格式: {format}")
+            raise ValueError(f"不支持的格式: {format}。支持: jsonl, json, training, training_system, conversation, chatml")
         
         logger.info(f"数据集已保存到 {filepath}，共 {len(qa_pairs)} 条记录")
     
@@ -984,11 +1017,23 @@ class DatasetBuilder:
             for qa in qa_pairs:
                 f.write(json.dumps(qa.to_training_format(), ensure_ascii=False) + '\n')
     
+    def _save_training_format_with_system(self, qa_pairs: List[QAPair], filepath: str):
+        """保存为带系统提示的训练格式（推荐用于专业领域SFT）"""
+        with open(filepath, 'w', encoding='utf-8') as f:
+            for qa in qa_pairs:
+                f.write(json.dumps(qa.to_training_format_with_system(), ensure_ascii=False) + '\n')
+    
     def _save_conversation_format(self, qa_pairs: List[QAPair], filepath: str):
-        """保存为对话格式"""
+        """保存为对话格式（ShareGPT格式）"""
         with open(filepath, 'w', encoding='utf-8') as f:
             for qa in qa_pairs:
                 f.write(json.dumps(qa.to_conversation_format(), ensure_ascii=False) + '\n')
+    
+    def _save_chatml_format(self, qa_pairs: List[QAPair], filepath: str):
+        """保存为ChatML格式（适用于Qwen/Llama-3等模型SFT）"""
+        with open(filepath, 'w', encoding='utf-8') as f:
+            for qa in qa_pairs:
+                f.write(json.dumps(qa.to_chatml_format(), ensure_ascii=False) + '\n')
     
     @staticmethod
     def load_dataset(filepath: str) -> List[QAPair]:

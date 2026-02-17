@@ -246,7 +246,9 @@ class RANSTRUCTPipeline:
     def step3_generate_questions(
         self, 
         max_chunks: Optional[int] = None,
-        questions_per_chunk: Optional[int] = None
+        questions_per_chunk: Optional[int] = None,
+        shard_id: Optional[int] = None,
+        num_shards: Optional[int] = None
     ) -> Dict:
         """
         步骤3: 生成问题
@@ -254,6 +256,8 @@ class RANSTRUCTPipeline:
         Args:
             max_chunks: 最大处理的 LTG chunks 数量
             questions_per_chunk: 每个 chunk 生成的问题数
+            shard_id: 当前分片 ID (0 ~ num_shards-1)
+            num_shards: 总分片数
             
         Returns:
             问题生成统计信息
@@ -274,6 +278,17 @@ class RANSTRUCTPipeline:
         
         # 选择要处理的 chunks
         chunks_to_process = self._ltg_chunks
+        
+        # 应用分片逻辑
+        if shard_id is not None and num_shards is not None:
+            total_chunks = len(chunks_to_process)
+            chunk_size = total_chunks // num_shards
+            start_idx = shard_id * chunk_size
+            end_idx = start_idx + chunk_size if shard_id < num_shards - 1 else total_chunks
+            
+            chunks_to_process = chunks_to_process[start_idx:end_idx]
+            logger.info(f"应用分片 {shard_id}/{num_shards}: 处理 chunks {start_idx} 到 {end_idx} (共 {len(chunks_to_process)}/{total_chunks})")
+
         if max_chunks:
             chunks_to_process = chunks_to_process[:max_chunks]
         
@@ -288,7 +303,12 @@ class RANSTRUCTPipeline:
         
         # 保存中间结果
         if self.config.output.save_intermediate:
-            questions_file = self._get_output_filename(self.config.output.questions_filename)
+            base_name = self.config.output.questions_filename
+            if shard_id is not None:
+                name, ext = base_name.rsplit('.', 1) if '.' in base_name else (base_name, '')
+                base_name = f"{name}_part{shard_id}.{ext}" if ext else f"{name}_part{shard_id}"
+                
+            questions_file = self._get_output_filename(base_name)
             self.question_generator.save_questions(self._questions, str(questions_file))
         
         result = {
@@ -402,7 +422,8 @@ class RANSTRUCTPipeline:
         self,
         strict_mode: bool = False,
         save_cleaned: bool = True,
-        filepath: Optional[str] = None
+        filepath: Optional[str] = None,
+        output_format: str = "jsonl"
     ) -> Dict:
         """
         步骤6: 质量后处理与清洗
@@ -416,6 +437,7 @@ class RANSTRUCTPipeline:
             strict_mode: 严格模式下丢弃有问题数据，宽松模式下尝试修复
             save_cleaned: 是否保存清洗后的数据集
             filepath: 输出文件路径
+            output_format: 输出格式 (jsonl, chatml, conversation 等)
             
         Returns:
             后处理统计信息
@@ -481,7 +503,14 @@ class RANSTRUCTPipeline:
                 base_filename = self.config.output.dataset_filename.replace('.jsonl', '_cleaned.jsonl')
                 filepath = str(self._get_output_filename(base_filename))
             
-            self.dataset_builder.save_dataset(cleaned_pairs, "jsonl", filepath)
+            # 使用指定的输出格式
+            self.dataset_builder.save_dataset(cleaned_pairs, output_format, filepath)
+            
+            # 如果是 chatml 或 conversation 格式，额外保存一份带格式后缀的文件
+            if output_format in ['chatml', 'conversation', 'training_system']:
+                sft_filepath = filepath.replace('.jsonl', f'_sft_{output_format}.jsonl')
+                self.dataset_builder.save_dataset(cleaned_pairs, output_format, sft_filepath)
+                logger.info(f"已导出 SFT 格式: {sft_filepath}")
         
         result = {
             "original_count": original_count,
@@ -554,7 +583,9 @@ class RANSTRUCTPipeline:
         top_k: Optional[int] = None,
         output_format: str = "jsonl",
         enable_post_process: bool = True,
-        strict_mode: bool = False
+        strict_mode: bool = False,
+        shard_id: Optional[int] = None,
+        num_shards: Optional[int] = None
     ) -> Dict:
         """
         运行完整管道
@@ -568,12 +599,16 @@ class RANSTRUCTPipeline:
             output_format: 输出格式
             enable_post_process: 是否启用质量后处理
             strict_mode: 后处理严格模式
+            shard_id: 当前分片 ID (0 ~ num_shards-1)
+            num_shards: 总分片数
             
         Returns:
             管道执行结果
         """
         logger.info("=" * 60)
         logger.info("RANSTRUCT 数据集生成管道启动")
+        if shard_id is not None and num_shards is not None:
+             logger.info(f"模式: 分片执行 {shard_id + 1}/{num_shards}")
         logger.info("=" * 60)
         
         self.stats.start_time = time.time()
@@ -589,22 +624,32 @@ class RANSTRUCTPipeline:
             # 步骤 2: FAISS 索引
             results["step2_faiss"] = self.step2_build_faiss(use_existing_faiss)
             
-            # 步骤 3: 问题生成
+            # 步骤 3: 问题生成 (支持分片)
             results["step3_questions"] = self.step3_generate_questions(
-                max_chunks, questions_per_chunk
+                max_chunks, questions_per_chunk, shard_id, num_shards
             )
             
             # 步骤 4: 答案生成
             results["step4_answers"] = self.step4_generate_answers(top_k)
             
             # 步骤 5: 保存原始数据集
-            results["step5_save"] = self.step5_save_dataset(output_format)
+            # 如果是分片模式，修改文件名
+            save_filepath = None
+            if shard_id is not None:
+                base_name = self.config.output.dataset_filename
+                name, ext = base_name.rsplit('.', 1) if '.' in base_name else (base_name, '')
+                save_filepath = str(self._get_output_filename(f"{name}_part{shard_id}.{ext}" if ext else f"{name}_part{shard_id}"))
+
+            results["step5_save"] = self.step5_save_dataset(output_format, save_filepath)
             
             # 步骤 6: 质量后处理（可选）
+            # 注意: 分片模式下可能建议最后合并后再处理，或者分别处理
             if enable_post_process:
+                # 分片模式下，后处理输出也加上后缀
                 results["step6_post_process"] = self.step6_post_process(
                     strict_mode=strict_mode,
-                    save_cleaned=True
+                    save_cleaned=True,
+                    output_format=output_format  # 传递输出格式
                 )
             
             self.stats.end_time = time.time()

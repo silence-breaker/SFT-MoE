@@ -1,0 +1,68 @@
+# ============================================================================
+# RANSTRUCT Docker Compose 配置
+# 用于一键启动数据集生成环境
+# ============================================================================
+
+version: '3.8'
+
+services:
+  ranstruct:
+    build:
+      context: ..
+      dockerfile: docker_deploy/Dockerfile
+    image: ranstruct:latest
+    container_name: ranstruct-generator
+    
+    # GPU 配置 (8x A100)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    
+    # 环境变量
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+      - OLLAMA_NUM_PARALLEL=32
+      - OLLAMA_MAX_LOADED_MODELS=2
+      - OLLAMA_FLASH_ATTENTION=1
+      # 可选：指定要拉取的模型
+      - MODELS_TO_PULL=mistral:latest qwen2.5:1.5b
+    
+    # 数据卷挂载
+    volumes:
+      # 数据源（O-RAN 规范 + srsRAN 代码）
+      - ../datasource:/app/datasource
+      # 输出目录（生成的数据集）
+      - ../output:/app/output
+      # 日志目录
+      - ./logs:/app/logs
+      # Ollama 模型缓存（避免重复下载）
+      - ollama_models:/root/.ollama
+    
+    # 网络配置
+    ports:
+      - "11434:11434"  # Ollama API（可选，用于调试）
+    
+    # 工作目录
+    working_dir: /app
+    
+    # 保持容器运行（用于交互式使用）
+    stdin_open: true
+    tty: true
+    
+    # 健康检查
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 120s
+
+# 持久化卷
+volumes:
+  ollama_models:
+    driver: local

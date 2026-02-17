@@ -1,0 +1,600 @@
+{"index": 0, "ref": "3. ER4", "pred": "1. FRx", "correct": false}
+{"index": 1, "ref": "2. O-RAN test specifications", "pred": "2. O-RAN test specifications", "correct": true}
+{"index": 2, "ref": "1. Radio fingerprint", "pred": "1. Radio fingerprint", "correct": true}
+{"index": 3, "ref": "2.  Fronthaul", "pred": "2. Fronthaul", "correct": true}
+{"index": 4, "ref": "1. rApps and xApps", "pred": "1. rApps and xApps", "correct": true}
+{"index": 5, "ref": "4. cellId", "pred": "4. cellId", "correct": true}
+{"index": 6, "ref": "1. Open Radio Access Network (O-RAN) Adopter License Agreement", "pred": "1. Open Radio Access Network (O-RAN", "correct": true}
+{"index": 7, "ref": "2.  Order software management procedures to avoid impacting other O-RUs during reset procedures.", "pred": "2. Order software management procedures to avoid impacting other", "correct": true}
+{"index": 8, "ref": "4. Implementing a centralized authentication server.", "pred": "1. Automating PSK/Refnum based", "correct": false}
+{"index": 9, "ref": "1. Support for container-based NF deployments", "pred": "1. Support for container-based NF deployments", "correct": true}
+{"index": 10, "ref": "2.  The password must be at least 6 characters long and include 3 of the following: uppercase letters, lowercase letters, numbers, and special characters.", "pred": "1. The password must be at least 8", "correct": false}
+{"index": 11, "ref": "1. PRACH false alarm probability", "pred": "4. Power consumption", "correct": false}
+{"index": 12, "ref": "2. 8 characters", "pred": "2. 8 characters", "correct": true}
+{"index": 13, "ref": "2. To generate and demodulate 3GPP compliant waveforms for testing.", "pred": "2. To generate and demodulate 3", "correct": true}
+{"index": 14, "ref": "3. O-DU Software Management", "pred": "3. O-DU Software Management", "correct": true}
+{"index": 15, "ref": "1. To divide large data packets into smaller packets that can be transmitted over a network with a limited MTU.", "pred": "1. To divide large data packets into smaller packets", "correct": true}
+{"index": 16, "ref": "1. 68719476735", "pred": "2. 2684354", "correct": false}
+{"index": 17, "ref": "1. O-RU", "pred": "1. O-RU", "correct": true}
+{"index": 18, "ref": "1. To track the number of emergency calls that fail due to protocol errors.", "pred": "1. To track the number of emergency calls that", "correct": true}
+{"index": 19, "ref": "1. To track the number of DCI transmissions canceled due to PDCCH resource shortage.", "pred": "1. To track the number of DCI transmissions", "correct": true}
+{"index": 20, "ref": "3. Product design specifications", "pred": "3. Product design specifications", "correct": true}
+{"index": 21, "ref": "3. `inet:dscp`", "pred": "3. `inet:dscp`", "correct": true}
+{"index": 22, "ref": "1. To verify the radio's ability to interpret C-Plane resource allocation messages with the reMask parameter set and transmit data accurately in the downlink.", "pred": "1. To verify the radio's ability to interpret", "correct": true}
+{"index": 23, "ref": "3. HTTP", "pred": "4. JSON", "correct": false}
+{"index": 24, "ref": "4. All of the above", "pred": "4. All of the above", "correct": true}
+{"index": 25, "ref": "2. Ensure the O-RU properly increments the symbol ID based on the SymInc bit.", "pred": "2. Ensure the O-RU properly increments the", "correct": true}
+{"index": 26, "ref": "2. O-DU", "pred": "2. O-DU", "correct": true}
+{"index": 27, "ref": "3. 3GPP TS 28.313: Management and orchestration; Self-Organizing Networks (SON) for 5G networks", "pred": "3. 3GPP TS 28", "correct": true}
+{"index": 28, "ref": "4. Data Dictionary", "pred": "4. Data Dictionary", "correct": true}
+{"index": 29, "ref": "3. O-RU", "pred": "3. O-RU", "correct": true}
+{"index": 30, "ref": "1. To verify the successful completion of the Secondary Node Change procedure initiated by the S-NG-RAN, involving MgNB, SgNB, and T-gNB from different vendors.", "pred": "1. To verify the successful completion of the Secondary", "correct": true}
+{"index": 31, "ref": "2. Category B radios", "pred": "1. Category A radios", "correct": false}
+{"index": 32, "ref": "3. Prediction of anomalous HO situations in real-time.", "pred": "4. Maintaining a database with prevalence rates for", "correct": false}
+{"index": 33, "ref": "2.  \"eaxc-id\" must be unique for all endpoints in the O-RU in the same direction (Tx or Rx).", "pred": "1. \"eaxc-id\" must be unique", "correct": false}
+{"index": 34, "ref": "2. IEEE1588", "pred": "4. PTP", "correct": false}
+{"index": 35, "ref": "3. The repeated C-Plane message has the \"repetition\" bit set to one.", "pred": "3. The repeated C-Plane message has the", "correct": true}
+{"index": 36, "ref": "4. Traditional network infrastructure", "pred": "4. Traditional network infrastructure", "correct": true}
+{"index": 37, "ref": "3. NETCONF", "pred": "3. NETCONF", "correct": true}
+{"index": 38, "ref": "1.  Data Plane Development Kit (DPDK)", "pred": "1. Data Plane Development Kit (DPDK)", "correct": true}
+{"index": 39, "ref": "4. All of the above.", "pred": "4. All of the above.", "correct": true}
+{"index": 40, "ref": "2. o1NotifyFormatConfig", "pred": "2. o1NotifyFormatConfig", "correct": true}
+{"index": 41, "ref": "2. The E2 Node stops collecting data for the UE and reports NULL values for the granularity periods where the UE is in RRC_IDLE state.", "pred": "4. The E2 Node continues collecting data for", "correct": false}
+{"index": 42, "ref": "3. Hardware Layer, Acceleration Abstraction Layer, Virtual RAN Functions Layer", "pred": "1. Hardware Layer, Cloud Stack Layer, Virtual", "correct": false}
+{"index": 43, "ref": "3. Regardless of any notification from the O-RU.", "pred": "1. When the O-RU requests calibration through", "correct": false}
+{"index": 44, "ref": "4.  No beamforming operation will be performed.", "pred": "4. No beamforming operation will be performed.", "correct": true}
+{"index": 45, "ref": "4. Near-RT RIC, O-CU-CP, O-CU-UP, and O-DU", "pred": "4. Near-RT RIC, O-C", "correct": true}
+{"index": 46, "ref": "3. Master Enabled", "pred": "4. LOCKED", "correct": false}
+{"index": 47, "ref": "4. All of the above", "pred": "4. All of the above", "correct": true}
+{"index": 48, "ref": "2. SP-SS Secure Storage", "pred": "2. SP-SS Secure Storage", "correct": true}
+{"index": 49, "ref": "3. enumeration", "pred": "3. enumeration", "correct": true}
+{"index": 50, "ref": "3. Collecting O-RU capabilities.", "pred": "2. Aligning the O-RU to a", "correct": false}
+{"index": 51, "ref": "4. To distinguish the CRS shift pattern for different antenna ports.", "pred": "4. To distinguish the CRS shift pattern for different", "correct": true}
+{"index": 52, "ref": "2. Non-exclusive, non-transferable, irrevocable", "pred": "2. Non-exclusive, non-transferable, ir", "correct": true}
+{"index": 53, "ref": "2. 12Kg", "pred": "3. 15Kg", "correct": false}
+{"index": 54, "ref": "3. O-RAN-Architecture-Description document", "pred": "4. 3GPP TS 28", "correct": false}
+{"index": 55, "ref": "3. 125us", "pred": "2. 336us", "correct": false}
+{"index": 56, "ref": "4. The O-RU is connected to the O-CU through the fronthaul interface.", "pred": "3. The O-CU is configured using the", "correct": false}
+{"index": 57, "ref": "1. O-RAN Centralized Unit", "pred": "2. Open Central Unit", "correct": false}
+{"index": 58, "ref": "2. low-level-tx-endpoint", "pred": "4. tx-eaxc-id", "correct": false}
+{"index": 59, "ref": "2.  To support the initiation of AI/ML training requests.", "pred": "2. To support the initiation of AI/ML", "correct": true}
+{"index": 60, "ref": "4. 1.0.1", "pred": "2. 1.2.1", "correct": false}
+{"index": 61, "ref": "2. SHA-1", "pred": "2. SHA-1", "correct": true}
+{"index": 62, "ref": "4.  To provide a common radio access point for multiple O-DUs.", "pred": "4. To provide a common radio access point for", "correct": true}
+{"index": 63, "ref": "3.  The O-RAN ALLIANCE", "pred": "3. The O-RAN ALLIANCE", "correct": true}
+{"index": 64, "ref": "3. To run on the Near-RT RIC and interact directly with RAN functionality.", "pred": "3. To run on the Near-RT R", "correct": true}
+{"index": 65, "ref": "4. 5G Core Network", "pred": "4. 5G Core Network", "correct": true}
+{"index": 66, "ref": "1. Front Haul", "pred": "1. Front Haul", "correct": true}
+{"index": 67, "ref": "1. To manage the Radio Units (RU) and provide the interface to the core network.", "pred": "2. To handle the physical layer processing and transmit", "correct": false}
+{"index": 68, "ref": "2. Advanced Sleep Mode (ASM)", "pred": "2. Advanced Sleep Mode (ASM)", "correct": true}
+{"index": 69, "ref": "1. To verify the successful exchange of DSS information between MN (eNB) and SN (en-gNB) from different vendors.", "pred": "1. To verify the successful exchange of DSS", "correct": true}
+{"index": 70, "ref": "2. 6028163", "pred": "2. 6028163", "correct": true}
+{"index": 71, "ref": "4. To request the gNB-DU to poll for assistance information from the gNB-CU.", "pred": "4. To request the gNB-DU to", "correct": true}
+{"index": 72, "ref": "3. 3GPP TS 28.541", "pred": "4. 3GPP TS 32", "correct": false}
+{"index": 73, "ref": "1.  O-RAN ALLIANCE e.V.", "pred": "1. O-RAN ALLIANCE e.V", "correct": true}
+{"index": 74, "ref": "1. O-RAN ALLIANCE e.V.", "pred": "1. O-RAN ALLIANCE e.V", "correct": true}
+{"index": 75, "ref": "3. Control plane DoS/DDoS protection", "pred": "3. Control plane DoS/DDoS protection", "correct": true}
+{"index": 76, "ref": "2. They are in development and expected to be completed in 2023/24.", "pred": "2. They are in development and expected to be", "correct": true}
+{"index": 77, "ref": "3. Security Testing Tools", "pred": "3. Security Testing Tools", "correct": true}
+{"index": 78, "ref": "2. IPsec", "pred": "1. TLS", "correct": false}
+{"index": 79, "ref": "2. To provide a meaningful understanding of resource utilization and system performance.", "pred": "2. To provide a meaningful understanding of resource utilization", "correct": true}
+{"index": 80, "ref": "1. o-ran-o-du-shared-o-ru", "pred": "1. o-ran-o-du-shared-o-", "correct": true}
+{"index": 81, "ref": "3. O-CU-CP", "pred": "3. O-CU-CP", "correct": true}
+{"index": 82, "ref": "2. To collect data from various network elements and make it available for analysis and decision-making.", "pred": "2. To collect data from various network elements and", "correct": true}
+{"index": 83, "ref": "2. O-RAN ALLIANCE", "pred": "2. O-RAN ALLIANCE", "correct": true}
+{"index": 84, "ref": "1.  Handling the transport functions of the FHGW and running the network operating system (NOS).", "pred": "1. Handling the transport functions of the FHGW", "correct": true}
+{"index": 85, "ref": "3. To request the E2 Node to update its list of supported RAN Functions.", "pred": "3. To request the E2 Node to update", "correct": true}
+{"index": 86, "ref": "3. Both 1 and 2", "pred": "3. Both 1 and 2", "correct": true}
+{"index": 87, "ref": "4. o-ran-agg-uplane-conf.yang", "pred": "2. o-ran-uplane-conf.yang", "correct": false}
+{"index": 88, "ref": "4. All of the above.", "pred": "4. All of the above.", "correct": true}
+{"index": 89, "ref": "2. Report-RANParameter-Item", "pred": "3. RIC-ReportStyle-Type", "correct": false}
+{"index": 90, "ref": "1. Synchronous Ethernet (G.8262 [14] / G.8262.1 [15])", "pred": "1. Synchronous Ethernet (G.82", "correct": true}
+{"index": 91, "ref": "2. To retrieve information about available software packages and their configurations.", "pred": "2. To retrieve information about available software packages and", "correct": true}
+{"index": 92, "ref": "4.  Regularly updating the PSK/Refnum to prevent unauthorized access.", "pred": "4. Regularly updating the PSK/Ref", "correct": true}
+{"index": 93, "ref": "2.  The presence of the \"Criticality Diagnostics\" IE in the \"S-NODE MODIFICATION CONFIRM\" message.", "pred": "3. U-Plane data generated in step", "correct": false}
+{"index": 94, "ref": "1. At the cell site.", "pred": "3. Distributed across multiple cell sites.", "correct": false}
+{"index": 95, "ref": "3. ITU-T", "pred": "3. ITU-T", "correct": true}
+{"index": 96, "ref": "1. 1.25", "pred": "1. 1.25", "correct": true}
+{"index": 97, "ref": "1. The O-DU is unable to establish a restore connection to the O-RU after a reset.", "pred": "1. The O-DU is unable to establish", "correct": true}
+{"index": 98, "ref": "2. Only one", "pred": "2. Only one", "correct": true}
+{"index": 99, "ref": "1. To define the format and parameters for inserting new functionalities into the RAN.", "pred": "1. To define the format and parameters for inserting", "correct": true}
+{"index": 100, "ref": "3. 190ns", "pred": "3. 190ns", "correct": true}
+{"index": 101, "ref": "1. RF, IF, PHY (Downlink and uplink digital processing, baseband signal conversion to/from RF signal)", "pred": "1. RF, IF, PHY (Downlink", "correct": true}
+{"index": 102, "ref": "2. ≤32 ppb", "pred": "2. ≤32 ppb", "correct": true}
+{"index": 103, "ref": "3.  Initiating the procedure to deploy the updated artifact version of the AI/ML model being consumed by the rApp.", "pred": "1. Providing the AI/ML model to the", "correct": false}
+{"index": 104, "ref": "2. To create a static channel model with a rank equal to or greater than the number of spatial streams.", "pred": "2. To create a static channel model with a", "correct": true}
+{"index": 105, "ref": "1. 4T4R and 8T8R", "pred": "1. 4T4R and 8", "correct": true}
+{"index": 106, "ref": "1. Point-to-point", "pred": "1. Point-to-point", "correct": true}
+{"index": 107, "ref": "4. Open Testing and Integration Centre (OTIC)", "pred": "4. Open Testing and Integration Centre (OTIC", "correct": true}
+{"index": 108, "ref": "2. To validate key radio operation after C-Plane establishment and initial U-Plane data transfer.", "pred": "2. To validate key radio operation after C-", "correct": true}
+{"index": 109, "ref": "2. Reducing capital expenditure (CAPEX)", "pred": "2. Reducing capital expenditure (CAPEX)", "correct": true}
+{"index": 110, "ref": "3. The TNE must have been pre-provisioned with a unique device vendor-signed certificate.", "pred": "3. The TNE must have been pre-pro", "correct": true}
+{"index": 111, "ref": "3. A user successfully accessing a resource without authentication.", "pred": "3. A user successfully accessing a resource without authentication", "correct": true}
+{"index": 112, "ref": "1. To standardize and promote the adoption of Open Radio Access Networks (O-RAN)", "pred": "1. To standardize and promote the adoption of", "correct": true}
+{"index": 113, "ref": "3. The O-DU populates the non-occupied REs with zero values.", "pred": "3. The O-DU populates the non", "correct": true}
+{"index": 114, "ref": "3. To handle the physical layer processing for the radio signals.", "pred": "3. To handle the physical layer processing for the", "correct": true}
+{"index": 115, "ref": "2. Generate and transmit test data to the O-RU.", "pred": "2. Generate and transmit test data to the O", "correct": true}
+{"index": 116, "ref": "1. v1", "pred": "1. v1", "correct": true}
+{"index": 117, "ref": "2. A group of interconnected O-RAN resources that are expected to fail together.", "pred": "2. A group of interconnected O-RAN resources", "correct": true}
+{"index": 118, "ref": "2. Information for multiple eAxC_IDs.", "pred": "1. Information for a single eAxC_ID", "correct": false}
+{"index": 119, "ref": "4. Service Management and Orchestration", "pred": "4. Service Management and Orchestration", "correct": true}
+{"index": 120, "ref": "1. To track the average number of UE Contexts that are configured with SN terminated split bearer.", "pred": "1. To track the average number of UE Context", "correct": true}
+{"index": 121, "ref": "2. To signal that the gNB-DU has finished transmitting all PDCP data to the UE.", "pred": "2. To signal that the gNB-DU", "correct": true}
+{"index": 122, "ref": "2. PDU Session Path Update procedure", "pred": "3. UE Context Modification procedure", "correct": false}
+{"index": 123, "ref": "2. To validate that the eCPRI protocol logs relevant security events and supports auditing capabilities.", "pred": "2. To validate that the eCPRI protocol", "correct": true}
+{"index": 124, "ref": "2. Two transport flows for the north node correspond to four transport flows for the south nodes.", "pred": "1. One transport flow for the north node corresponds", "correct": false}
+{"index": 125, "ref": "2. The O-DU will assume that the O-RU's C-Plane and U-Plane processing are disabled for the duration of the commands.", "pred": "2. The O-DU will assume that the", "correct": true}
+{"index": 126, "ref": "3. 60ns", "pred": "1. 190ns", "correct": false}
+{"index": 127, "ref": "3. Vulnerable and Outdated Components", "pred": "4. Account Hijacking", "correct": false}
+{"index": 128, "ref": "1.  Collects and enriches data, trains and deploys AI/ML models, and monitors their performance.", "pred": "1. Collects and enriches data, trains", "correct": true}
+{"index": 129, "ref": "1. 1100ns", "pred": "3. 190ns", "correct": false}
+{"index": 130, "ref": "4. Network Latency", "pred": "4. Network Latency", "correct": true}
+{"index": 131, "ref": "2. MD5", "pred": "2. MD5", "correct": true}
+{"index": 132, "ref": "2. To handle radio frequency (RF) transmission and reception.", "pred": "2. To handle radio frequency (RF) transmission", "correct": true}
+{"index": 133, "ref": "3. 30 dB", "pred": "2. 20 dB", "correct": false}
+{"index": 134, "ref": "1. guAmfUeNgapId", "pred": "4. guGnbCuCpUe", "correct": false}
+{"index": 135, "ref": "2. GNSS (PRTC-A)", "pred": "2. GNSS (PRTC-A)", "correct": true}
+{"index": 136, "ref": "2. Precision Time Protocol (PTP)", "pred": "2. Precision Time Protocol (PTP)", "correct": true}
+{"index": 137, "ref": "2. The Fronthaul ports transition to Slave role.", "pred": "2. The Fronthaul ports transition to", "correct": true}
+{"index": 138, "ref": "2. To test the creation of a single policy as specified by A1AP clause 5.2.4.3.", "pred": "2. To test the creation of a single policy", "correct": true}
+{"index": 139, "ref": "4. O-RU7-2x Specific Requirements", "pred": "4. O-RU7-2x Specific", "correct": true}
+{"index": 140, "ref": "3. 192", "pred": "1. 64", "correct": false}
+{"index": 141, "ref": "2. To measure the distribution of PDSCH transmitted with rank 2 per SSB.", "pred": "2. To measure the distribution of PDSCH", "correct": true}
+{"index": 142, "ref": "3. By employing a combination of techniques like sequence numbers, timestamps, and message authentication codes.", "pred": "3. By employing a combination of techniques like sequence", "correct": true}
+{"index": 143, "ref": "2. It acts as an API server, providing information to the apiconsumer.", "pred": "1. It acts as an API consumer, requesting", "correct": false}
+{"index": 144, "ref": "1. To certify the security and functionality of end-to-end systems or subsystems utilizing O-RAN open interfaces.", "pred": "1. To certify the security and functionality of end", "correct": true}
+{"index": 145, "ref": "3. rrc-active", "pred": "3. rrc-active", "correct": true}
+{"index": 146, "ref": "3. T-BC", "pred": "4. T-TC", "correct": false}
+{"index": 147, "ref": "1. 3GPP TR 21.905", "pred": "1. 3GPP TR 21", "correct": true}
+{"index": 148, "ref": "1. O-RAN ALLIANCE e.V.", "pred": "1. O-RAN ALLIANCE e.V", "correct": true}
+{"index": 149, "ref": "3. Baseline Configuration Comparison", "pred": "1. File Integrity Monitoring", "correct": false}
+{"index": 150, "ref": "2. By receiving an IPv6 Router Advertisement without either the \"managed address configuration\" or \"other configuration\" bits set.", "pred": "2. By receiving an IPv6 Router Advertisement without", "correct": true}
+{"index": 151, "ref": "4. All of the above", "pred": "4. All of the above", "correct": true}
+{"index": 152, "ref": "2. Non-RT RIC", "pred": "1. Near-RT RIC", "correct": false}
+{"index": 153, "ref": "2. Number of successful RRC re-establishment requests after retransmission during voice calls.", "pred": "3. Number of RRC re-establishment requests", "correct": false}
+{"index": 154, "ref": "3. To establish a standardized architecture for O-RAN Operations, Administration, and Maintenance (OAM).", "pred": "3. To establish a standardized architecture for O-R", "correct": true}
+{"index": 155, "ref": "3. GET", "pred": "3. GET", "correct": true}
+{"index": 156, "ref": "4. O-RAN ALLIANCE", "pred": "4. O-RAN ALLIANCE", "correct": true}
+{"index": 157, "ref": "3. Configuring the O-RU for operation using M-Plane commands.", "pred": "3. Configuring the O-RU for operation", "correct": true}
+{"index": 158, "ref": "2. To test the functionality of querying EI job identifiers for a specific EI type.", "pred": "2. To test the functionality of querying EI job", "correct": true}
+{"index": 159, "ref": "1. Virtual Baseband Unit", "pred": "1. Virtual Baseband Unit", "correct": true}
+{"index": 160, "ref": "3. IQ compression", "pred": "4. IQ decompression", "correct": false}
+{"index": 161, "ref": "1. 1000", "pred": "2. 100", "correct": false}
+{"index": 162, "ref": "3. To manage the O-DU and O-RU software and collect performance data.", "pred": "3. To manage the O-DU and O", "correct": true}
+{"index": 163, "ref": "2. To outline the terms of use for O-RAN specifications.", "pred": "2. To outline the terms of use for O", "correct": true}
+{"index": 164, "ref": "2. Split architecture", "pred": "2. Split architecture", "correct": true}
+{"index": 165, "ref": "2. Path loss for FR2", "pred": "4. PRACH preamble correlation value", "correct": false}
+{"index": 166, "ref": "2. Network Statistics", "pred": "4. Location Information", "correct": false}
+{"index": 167, "ref": "4. External Interface Ports", "pred": "4. External Interface Ports", "correct": true}
+{"index": 168, "ref": "2. To simplify and automate the deployment and management of O-Clouds.", "pred": "2. To simplify and automate the deployment and management", "correct": true}
+{"index": 169, "ref": "1. A portion of an eAxC flow assigned to a specific O-DU processing element.", "pred": "1. A portion of an eAxC flow", "correct": true}
+{"index": 170, "ref": "3. A collaboration agreement for developing Open Radio Access Network (O-RAN) technology", "pred": "3. A collaboration agreement for developing Open Radio Access", "correct": true}
+{"index": 171, "ref": "4. Configuring the signal analyzer to demodulate the received signal.", "pred": "4. Configuring the signal analyzer to demod", "correct": true}
+{"index": 172, "ref": "1. To provide a standardized way for applications and other systems to interact with the O-RAN network.", "pred": "1. To provide a standardized way for applications and", "correct": true}
+{"index": 173, "ref": "2. The O-RAN ALLIANCE", "pred": "2. The O-RAN ALLIANCE", "correct": true}
+{"index": 174, "ref": "2. T34_max - Σ T_Comb(for O-Hub#𝑖)", "pred": "1. T34_max", "correct": false}
+{"index": 175, "ref": "2. To confirm the requested configuration changes are valid and conform to the network's specifications.", "pred": "2. To confirm the requested configuration changes are valid", "correct": true}
+{"index": 176, "ref": "1.  Fixed services spectrum", "pred": "1. Fixed services spectrum", "correct": true}
+{"index": 177, "ref": "2. To assess the communication performance of the OAM data link between active WDM equipment and optical modules.", "pred": "2. To assess the communication performance of the O", "correct": true}
+{"index": 178, "ref": "2. The E2 Node aborts further processing of the RAN function.", "pred": "2. The E2 Node aborts further processing", "correct": true}
+{"index": 179, "ref": "2. UL HARQ (CRC) Indication", "pred": "2. UL HARQ (CRC) Indication", "correct": true}
+{"index": 180, "ref": "2. Analyze network signaling activity levels using AI/ML models.", "pred": "3. Deploy xApps to near-RT R", "correct": false}
+{"index": 181, "ref": "2. To enforce slice SLA parameters from a 5G Core perspective.", "pred": "4. To handle user admission control based on NG", "correct": false}
+{"index": 182, "ref": "1. <rpc><software-activation>", "pred": "1. <rpc><software-activation>", "correct": true}
+{"index": 183, "ref": "2. Reasonable care.", "pred": "1. The same care and discretion Adopter employs", "correct": false}
+{"index": 184, "ref": "2. 20 Mbps", "pred": "3. 40 Mbps", "correct": false}
+{"index": 185, "ref": "2. Class 1", "pred": "1. Class 1M", "correct": false}
+{"index": 186, "ref": "3. Adaptive-Compression", "pred": "3. Adaptive-Compression", "correct": true}
+{"index": 187, "ref": "2. ≥2 W", "pred": "2. ≥2 W", "correct": true}
+{"index": 188, "ref": "1. To monitor and analyze network performance using trace records.", "pred": "1. To monitor and analyze network performance using trace", "correct": true}
+{"index": 189, "ref": "2. The location of the data producer.", "pred": "2. The location of the data producer.", "correct": true}
+{"index": 190, "ref": "1. Secure communication between the SMO and O-Cloud for managing O-Cloud infrastructure and deployment of O-RAN NFs.", "pred": "1. Secure communication between the SMO and O", "correct": true}
+{"index": 191, "ref": "3. Comparing the payload data extracted from both the uplink and downlink signals.", "pred": "4. Testing the timing windows described in clause", "correct": false}
+{"index": 192, "ref": "2. The O-RAN ALLIANCE", "pred": "2. The O-RAN ALLIANCE", "correct": true}
+{"index": 193, "ref": "1. resourceType, rRMPolicyMemberList, rRMPolicyMinRatio, rRMPolicyMaxRatio", "pred": "1. resourceType, rRMPolicyMember", "correct": true}
+{"index": 194, "ref": "3. Tree/Linear Topology", "pred": "3. Tree/Linear Topology", "correct": true}
+{"index": 195, "ref": "1. To inform the TN and O-DU that the CTI server is still operational.", "pred": "1. To inform the TN and O-DU", "correct": true}
+{"index": 196, "ref": "1. To ensure the O-RU can receive and decode PRACH signals from the user equipment (UE).", "pred": "1. To ensure the O-RU can receive", "correct": true}
+{"index": 197, "ref": "3. To restore the original size and precision of the physical resource block (PRB) after compression.", "pred": "3. To restore the original size and precision of", "correct": true}
+{"index": 198, "ref": "1. To verify the O-RU's ability to correctly interpret and process C-Plane messages related to Licensed Assisted Access (LAA).", "pred": "1. To verify the O-RU's ability", "correct": true}
+{"index": 199, "ref": "2. Potential integration or interoperability issues.", "pred": "2. Potential integration or interoperability issues.", "correct": true}
+{"index": 200, "ref": "2. FIPS 197", "pred": "2. FIPS 197", "correct": true}
+{"index": 201, "ref": "2. maxNumberOfUes", "pred": "2. maxNumberOfUes", "correct": true}
+{"index": 202, "ref": "2. C-RAN", "pred": "3. dTE", "correct": false}
+{"index": 203, "ref": "1.  It identifies the specific section description that the O-DU is requesting ACK/NACK feedback for.", "pred": "1. It identifies the specific section description that the", "correct": true}
+{"index": 204, "ref": "1. To connect a Near-Real-Time RAN Intelligent Controller (Near-RT RIC) to an E2 Node.", "pred": "1. To connect a Near-Real-Time R", "correct": true}
+{"index": 205, "ref": "1. The specific processing chain in an O-RU associated with D/A or A/D converters.", "pred": "1. The specific processing chain in an O-R", "correct": true}
+{"index": 206, "ref": "2.  Collecting the O-RU capabilities.", "pred": "1. Connecting the signal analyzer to the O-R", "correct": false}
+{"index": 207, "ref": "2. The frequency domain IQ data in one data section.", "pred": "2. The frequency domain IQ data in one data", "correct": true}
+{"index": 208, "ref": "2. To host xApps", "pred": "4. To provide real-time control of the R", "correct": false}
+{"index": 209, "ref": "2. Troubleshooting logs", "pred": "1. Trace logs", "correct": false}
+{"index": 210, "ref": "1. To enable a UE to seamlessly handover between different gNB-DUs within the same gNB-CU.", "pred": "1. To enable a UE to seamlessly handover", "correct": true}
+{"index": 211, "ref": "4. Option 4", "pred": "2. Option 2", "correct": false}
+{"index": 212, "ref": "2.  It defines a URI where the A1-EI Provider can send results of an EI job to the A1-EI Consumer.", "pred": "2. It defines a URI where the A1", "correct": true}
+{"index": 213, "ref": "1. To ensure the efficient transmission of both control plane (C-Plane) and user plane (U-Plane) messages.", "pred": "1. To ensure the efficient transmission of both control", "correct": true}
+{"index": 214, "ref": "2. Centralized Unit as defined by 3GPP", "pred": "2. Centralized Unit as defined by 3", "correct": true}
+{"index": 215, "ref": "1. Open Radio Access Network Distributed Unit", "pred": "1. Open Radio Access Network Distributed Unit", "correct": true}
+{"index": 216, "ref": "3. RIC Control", "pred": "4. E2 Setup", "correct": false}
+{"index": 217, "ref": "2. 𝑔𝑐,𝑎 [dB]= 𝑔𝑐,𝑎,𝑘 [dB]+10  log10(K)", "pred": "2. 𝑔𝑐,𝑎 [dB", "correct": true}
+{"index": 218, "ref": "1. OR.ULSQL.DistPuschMcsRank1.MCSRetx.MCSTable", "pred": "1. OR.ULSQL.DistPusch", "correct": true}
+{"index": 219, "ref": "1. Version numbers", "pred": "1. Version numbers", "correct": true}
+{"index": 220, "ref": "2. To identify the specific occurrence of the problem.", "pred": "2. To identify the specific occurrence of the problem", "correct": true}
+{"index": 221, "ref": "1.  Process SRB and DRB", "pred": "1. Process SRB and DRB", "correct": true}
+{"index": 222, "ref": "2. GPRS Tunneling Protocol (GTP)", "pred": "2. GPRS Tunneling Protocol (GTP", "correct": true}
+{"index": 223, "ref": "3. Technical enhancements, corrections, and updates", "pred": "3. Technical enhancements, corrections, and updates", "correct": true}
+{"index": 224, "ref": "3. High", "pred": "3. High", "correct": true}
+{"index": 225, "ref": "3. Decoupling RAN hardware and software for greater flexibility.", "pred": "3. Decoupling RAN hardware and software", "correct": true}
+{"index": 226, "ref": "2. Subscription ID and termination indication.", "pred": "2. Subscription ID and termination indication.", "correct": true}
+{"index": 227, "ref": "4. All of the above", "pred": "4. All of the above", "correct": true}
+{"index": 228, "ref": "3. Updates to R1 Alarm query using TE&IV Services", "pred": "3. Updates to R1 Alarm query using TE", "correct": true}
+{"index": 229, "ref": "2. To specify the resource block groups (RBGs) that are allocated for transmission.", "pred": "2. To specify the resource block groups (RB", "correct": true}
+{"index": 230, "ref": "2. To release the UE context and PDU session resources at the S-NG-RAN node while keeping the UE context and relevant resources at the M-NG-RAN node.", "pred": "2. To release the UE context and PDU", "correct": true}
+{"index": 231, "ref": "2. Quiet Time Peak Rate", "pred": "4. Radio Throughput", "correct": false}
+{"index": 232, "ref": "2. To provide a mechanism for error detection in the fronthaul.", "pred": "1. To ensure timely delivery of delay-managed", "correct": false}
+{"index": 233, "ref": "4. 1300W", "pred": "3. 950W", "correct": false}
+{"index": 234, "ref": "3. From core to edge to access network", "pred": "3. From core to edge to access network", "correct": true}
+{"index": 235, "ref": "3.  It uses 3GPP APIs for communication between 3GPP domains.", "pred": "3. It uses 3GPP APIs for", "correct": true}
+{"index": 236, "ref": "4. Testing the O-RU's ability to transmit data", "pred": "1. Synchronizing the O-RU using", "correct": false}
+{"index": 237, "ref": "2. Compatibility is only possible if the API versions are the same, and any feature differences are handled within the same API version.", "pred": "2. Compatibility is only possible if the API versions", "correct": true}
+{"index": 238, "ref": "2. X.509 Certificate", "pred": "2. X.509 Certificate", "correct": true}
+{"index": 239, "ref": "1. Beam-based Mobility Robustness Optimization", "pred": "1. Beam-based Mobility Robustness Optimization", "correct": true}
+{"index": 240, "ref": "2. 260ns", "pred": "2. 260ns", "correct": true}
+{"index": 241, "ref": "2. The Xn logs show the \"Criticality Diagnostics\" IE.", "pred": "2. The Xn logs show the \"Critical", "correct": true}
+{"index": 242, "ref": "2.  received NG-AP: Initial Context Setup Response", "pred": "2. received NG-AP: Initial Context Setup", "correct": true}
+{"index": 243, "ref": "3. ≤60𝑛𝑠", "pred": "1. ≤190ns", "correct": false}
+{"index": 244, "ref": "1. POINT, POINT_UNCERTAINTY_CIRCLE, POINT_UNCERTAINTY_ELLIPSE, POLYGON, POINT_ALTITUDE", "pred": "3. POINT, CIRCLE, ELLIP", "correct": false}
+{"index": 245, "ref": "1. To ensure the O-RU can correctly decode and interpret C-Plane and U-Plane messages, allocating resource blocks in the transmitted signal using the extension type 6.", "pred": "1. To ensure the O-RU can correctly", "correct": true}
+{"index": 246, "ref": "3. CWDM, DWDM or tunable OTDR", "pred": "3. CWDM, DWDM or tunable", "correct": true}
+{"index": 247, "ref": "2. A cell is removed from the O-DU by upper layer protocols or the OAM system.", "pred": "2. A cell is removed from the O-D", "correct": true}
+{"index": 248, "ref": "1. 1-4", "pred": "3. 0-3", "correct": false}
+{"index": 249, "ref": "2. To ensure synchronization between the radio and the signal analyzer.", "pred": "4. To enable the radio to switch between different", "correct": false}
+{"index": 250, "ref": "1. O-RAN Adopter License Agreement", "pred": "1. O-RAN Adopter License Agreement", "correct": true}
+{"index": 251, "ref": "3. UE-Group-Definition", "pred": "3. UE-Group-Definition", "correct": true}
+{"index": 252, "ref": "4. To direct traffic efficiently based on network conditions.", "pred": "4. To direct traffic efficiently based on network conditions", "correct": true}
+{"index": 253, "ref": "3. To identify incremental changes made during the editing process of a working version.", "pred": "3. To identify incremental changes made during the editing", "correct": true}
+{"index": 254, "ref": "2. ≤36 ppb", "pred": "2. ≤36 ppb", "correct": true}
+{"index": 255, "ref": "1. To monitor the status of external devices and notify the O-RU controller of any changes.", "pred": "1. To monitor the status of external devices and", "correct": true}
+{"index": 256, "ref": "2. They will remain asleep for an extended interval starting from the slot the command was received.", "pred": "2. They will remain asleep for an extended interval", "correct": true}
+{"index": 257, "ref": "2. W=1, #Z.X.0-3 area and W=15, #Z.X.44-47 area", "pred": "1. W=1, #Z.X.", "correct": false}
+{"index": 258, "ref": "3. raiType", "pred": "3. raiType", "correct": true}
+{"index": 259, "ref": "1. Near-real-time RAN Intelligent Controller and E2 Service Model for Cell Configuration and Control", "pred": "1. Near-real-time RAN Intelligent Controller and", "correct": true}
+{"index": 260, "ref": "1. Category A and Category B radios", "pred": "1. Category A and Category B radios", "correct": true}
+{"index": 261, "ref": "2. Underground", "pred": "2. Underground", "correct": true}
+{"index": 262, "ref": "1. The test is considered \"pass\" if the binary sequences of the payload match between the uplink frame sent to the DUT and the received U-Plane data.", "pred": "1. The test is considered \"pass\" if", "correct": true}
+{"index": 263, "ref": "4. E2 Connection Update procedure with TNL Association added (positive case).", "pred": "4. E2 Connection Update procedure with TNL", "correct": true}
+{"index": 264, "ref": "2. O-CU", "pred": "2. O-CU", "correct": true}
+{"index": 265, "ref": "4. All of the above.", "pred": "4. All of the above.", "correct": true}
+{"index": 266, "ref": "3. Creating a new external CP representing the parent port of a trunk.", "pred": "4. Changing the L3 address of an existing", "correct": false}
+{"index": 267, "ref": "2.  Optimizing network performance by dynamically adjusting pre-scheduling parameters.", "pred": "1. Enhancing network security by detecting and mitig", "correct": false}
+{"index": 268, "ref": "2. Non-exclusive, non-transferable, irrevocable, non-sublicensable", "pred": "2. Non-exclusive, non-transferable, ir", "correct": true}
+{"index": 269, "ref": "3. Number of antennas", "pred": "3. Number of antennas", "correct": true}
+{"index": 270, "ref": "4. Network Slicing", "pred": "1. DOCSIS resource scheduling", "correct": false}
+{"index": 271, "ref": "2. file-upload", "pred": "2. file-upload", "correct": true}
+{"index": 272, "ref": "1. To ensure that O-CU and O-DU software from different vendors can communicate and function together.", "pred": "1. To ensure that O-CU and O", "correct": true}
+{"index": 273, "ref": "4.  Establishment Cause", "pred": "1. Cumulative Counter", "correct": false}
+{"index": 274, "ref": "4. Standardized interfaces", "pred": "4. Standardized interfaces", "correct": true}
+{"index": 275, "ref": "2. The O-RU begins collecting trace logs.", "pred": "2. The O-RU begins collecting trace logs", "correct": true}
+{"index": 276, "ref": "2. OAuth 2.0", "pred": "2. OAuth 2.0", "correct": true}
+{"index": 277, "ref": "1. 1465 ns", "pred": "1. 1465 ns", "correct": true}
+{"index": 278, "ref": "1. Verifying that the user plane transmission operates correctly between the Test UE or UE emulator and the Application Test Server.", "pred": "3. Ensuring the F1 UE Context Modification", "correct": false}
+{"index": 279, "ref": "4. RIC", "pred": "4. RIC", "correct": true}
+{"index": 280, "ref": "1. Ensuring data integrity and confidentiality", "pred": "1. Ensuring data integrity and confidentiality", "correct": true}
+{"index": 281, "ref": "2. E2 Node", "pred": "1. Near-RT RIC", "correct": false}
+{"index": 282, "ref": "4. Connecting the O-RU to a cellular network", "pred": "4. Connecting the O-RU to a cellular", "correct": true}
+{"index": 283, "ref": "4. Connecting the signal source to the O-RU antenna port and configuring it as described below", "pred": "4. Connecting the signal source to the O-R", "correct": true}
+{"index": 284, "ref": "1. Denial of Service Threats", "pred": "3. Physical Port Access Threats", "correct": false}
+{"index": 285, "ref": "1. Time-domain baseband information", "pred": "1. Time-domain baseband information", "correct": true}
+{"index": 286, "ref": "4. All of the above", "pred": "4. All of the above", "correct": true}
+{"index": 287, "ref": "3. MEF 22.3", "pred": "1. 3GPP TS 38", "correct": false}
+{"index": 288, "ref": "3. 201 Created", "pred": "4. 200 OK", "correct": false}
+{"index": 289, "ref": "2.  Stimulating cell deactivation through an O&M command.", "pred": "2. Stimulating cell deactivation through an O", "correct": true}
+{"index": 290, "ref": "4. Application Lifecycle Management (LCM)", "pred": "3. Network Functions Deployed behind a NAT", "correct": false}
+{"index": 291, "ref": "3. id-RANfunctionID", "pred": "3. id-RANfunctionID", "correct": true}
+{"index": 292, "ref": "2. O1", "pred": "2. O1", "correct": true}
+{"index": 293, "ref": "4. eNodeB", "pred": "4. eNodeB", "correct": true}
+{"index": 294, "ref": "1. To test the Near-RT RIC's ability to successfully acknowledge an update to the E2 Node component configuration.", "pred": "4. To verify the E2 Node configuration update", "correct": false}
+{"index": 295, "ref": "2. To isolate and convert the telco supply to appropriate voltages for distribution.", "pred": "2. To isolate and convert the telco supply", "correct": true}
+{"index": 296, "ref": "2. Maintaining a secure and robust certificate infrastructure.", "pred": "2. Maintaining a secure and robust certificate infrastructure", "correct": true}
+{"index": 297, "ref": "1. Verify the successful establishment of a link between the O-DU and SMO.", "pred": "1. Verify the successful establishment of a link between", "correct": true}
+{"index": 298, "ref": "1. To evaluate the latency performance of O-RAN TNEs in handling both preemptible and express traffic.", "pred": "1. To evaluate the latency performance of O-R", "correct": true}
+{"index": 299, "ref": "2. O-RAN TS: \"R1 General Aspects and Principles\"", "pred": "2. O-RAN TS: \"R1", "correct": true}
+{"index": 300, "ref": "1. T_FH1_max", "pred": "2. T_FH2_max", "correct": false}
+{"index": 301, "ref": "1. To verify the successful establishment of secure NETCONF sessions using SSH or TLS between O-DU and SMO, as well as O-DU and O-RU.", "pred": "1. To verify the successful establishment of secure NET", "correct": true}
+{"index": 302, "ref": "1. To define management functions, procedures, and operations for O-RAN.", "pred": "1. To define management functions, procedures, and", "correct": true}
+{"index": 303, "ref": "3. 400", "pred": "3. 400", "correct": true}
+{"index": 304, "ref": "3. 190ns", "pred": "3. 190ns", "correct": true}
+{"index": 305, "ref": "1. Standalone (SA) and Non-Standalone (NSA)", "pred": "1. Standalone (SA) and Non-St", "correct": true}
+{"index": 306, "ref": "4. Protecting the intellectual property of O-RAN vendors.", "pred": "4. Protecting the intellectual property of O-R", "correct": true}
+{"index": 307, "ref": "4. Annex H", "pred": "4. Annex H", "correct": true}
+{"index": 308, "ref": "3.  Determines which antennas are used for pre-combining signals received by a specific receiver.", "pred": "3. Determines which antennas are used for pre-com", "correct": true}
+{"index": 309, "ref": "1. The O-RAN Alliance can terminate the agreement if the Adopter doesn't rectify the breach within 30 days.", "pred": "1. The O-RAN Alliance can terminate the", "correct": true}
+{"index": 310, "ref": "2.  AI/ML model management and exposure services Consumer", "pred": "1. AI/ML model management and exposure services", "correct": false}
+{"index": 311, "ref": "2. Easier model maintenance and updates.", "pred": "2. Easier model maintenance and updates.", "correct": true}
+{"index": 312, "ref": "4. All of the above.", "pred": "4. All of the above.", "correct": true}
+{"index": 313, "ref": "3. To simulate a scenario where the UE temporarily loses connection to the network.", "pred": "3. To simulate a scenario where the UE temporarily", "correct": true}
+{"index": 314, "ref": "2. Transport Network Orchestrator (TNO)", "pred": "2. Transport Network Orchestrator (TNO", "correct": true}
+{"index": 315, "ref": "2. Interoperability Test (IOT) specifications", "pred": "2. Interoperability Test (IOT)", "correct": true}
+{"index": 316, "ref": "1. TS 38.141-1 D.1.1", "pred": "4. TS 38.141", "correct": false}
+{"index": 317, "ref": "3.  The data transfer should include some level of randomness to avoid all zeros.", "pred": "1. The Test UE must be registered to the", "correct": false}
+{"index": 318, "ref": "1. O-RAN ALLIANCE", "pred": "1. O-RAN ALLIANCE", "correct": true}
+{"index": 319, "ref": "1. RACH Configuration", "pred": "1. RACH Configuration", "correct": true}
+{"index": 320, "ref": "1. To identify and analyze vulnerabilities in O-RAN components.", "pred": "1. To identify and analyze vulnerabilities in O-R", "correct": true}
+{"index": 321, "ref": "3. It is solely focused on the calibration of the antenna module.", "pred": "3. It is solely focused on the calibration of", "correct": true}
+{"index": 322, "ref": "3. Openssh Security Vulnerabilities: https://www.cvedetails.com/vulnerability-list/vendor_id-97/product_id-585/Openbsd-Openssh.html", "pred": "3. Openssh Security Vulnerabilities: https://", "correct": true}
+{"index": 323, "ref": "3. FH-eCPRI", "pred": "3. FH-eCPRI", "correct": true}
+{"index": 324, "ref": "2. -5°C to +55°C", "pred": "2. -5°C to +55°C", "correct": true}
+{"index": 325, "ref": "3.  Non-RT RIC (Non-Real-Time Radio Intelligence Controller)", "pred": "1. SMO (Service Management and Orchest", "correct": false}
+{"index": 326, "ref": "1. POLICY then REPORT", "pred": "4. REPORT then POLICY", "correct": false}
+{"index": 327, "ref": "1. Open Fronthaul interface", "pred": "1. Open Fronthaul interface", "correct": true}
+{"index": 328, "ref": "4. O-RU", "pred": "2. O-DU7-2", "correct": false}
+{"index": 329, "ref": "2. maxDlPacketDelayPerUe", "pred": "2. maxDlPacketDelayPerUe", "correct": true}
+{"index": 330, "ref": "2. To track incremental changes during the editing process", "pred": "2. To track incremental changes during the editing process", "correct": true}
+{"index": 331, "ref": "1. To provide connectivity between O-RAN/3GPP components.", "pred": "1. To provide connectivity between O-RAN/", "correct": true}
+{"index": 332, "ref": "2. Near-Real Time RIC", "pred": "2. Near-Real Time RIC", "correct": true}
+{"index": 333, "ref": "2. colletStartTime", "pred": "1. matchingUEidList", "correct": false}
+{"index": 334, "ref": "2. O-CU", "pred": "2. O-CU", "correct": true}
+{"index": 335, "ref": "3. AUTHENTICATION_ERROR", "pred": "3. AUTHENTICATION_ERROR", "correct": true}
+{"index": 336, "ref": "1. The procedure should successfully complete according to the NR C-Plane profile specification.", "pred": "1. The procedure should successfully complete according to the", "correct": true}
+{"index": 337, "ref": "3. RICsubscriptionDeleteRequired", "pred": "1. RICserviceUpdate", "correct": false}
+{"index": 338, "ref": "1. MUST", "pred": "4. RECOMMENDED", "correct": false}
+{"index": 339, "ref": "1. To enhance the performance of the O-RU by accelerating specific tasks.", "pred": "1. To enhance the performance of the O-R", "correct": true}
+{"index": 340, "ref": "1. To verify that the O-RU can transmit a basic 3GPP test frame with UE-based antenna port grouping and channel-information-based beamforming.", "pred": "1. To verify that the O-RU can", "correct": true}
+{"index": 341, "ref": "1. OR.DRB.RlcPacketDropRateDlDist.Bin", "pred": "4. OR.DRB.RlcPacketDropRate", "correct": false}
+{"index": 342, "ref": "1. DPD", "pred": "1. DPD", "correct": true}
+{"index": 343, "ref": "1. To verify the successful download of configuration from SMO to O-DU-OAM-Agent for beamforming optimization.", "pred": "1. To verify the successful download of configuration from", "correct": true}
+{"index": 344, "ref": "1. To provide a standardized framework for developing and deploying open radio access networks.", "pred": "1. To provide a standardized framework for developing and", "correct": true}
+{"index": 345, "ref": "2. G.8275.1", "pred": "2. G.8275.1", "correct": true}
+{"index": 346, "ref": "2. To verify the Non-RT RIC supports OAuth 2.0 as a Client for A1-P.", "pred": "2. To verify the Non-RT RIC", "correct": true}
+{"index": 347, "ref": "4.  All of the above.", "pred": "2. The use of a common time reference with", "correct": false}
+{"index": 348, "ref": "3. Configuring the UE's operating system.", "pred": "3. Configuring the UE's operating system.", "correct": true}
+{"index": 349, "ref": "3. DL/UL MIMO Mode Control", "pred": "3. DL/UL MIMO Mode Control", "correct": true}
+{"index": 350, "ref": "1. Globally Unique AMF Identifier", "pred": "1. Globally Unique AMF Identifier", "correct": true}
+{"index": 351, "ref": "4. Number of antennas in the gNB", "pred": "4. Number of antennas in the gNB", "correct": true}
+{"index": 352, "ref": "1. O-RAN ALLIANCE e.V.", "pred": "1. O-RAN ALLIANCE e.V", "correct": true}
+{"index": 353, "ref": "2. IP/SCTP", "pred": "2. IP/SCTP", "correct": true}
+{"index": 354, "ref": "2. ≤100ns", "pred": "3. ≤190ns", "correct": false}
+{"index": 355, "ref": "1. Data Plane Development Kit", "pred": "1. Data Plane Development Kit", "correct": true}
+{"index": 356, "ref": "2. eNB (evolved NodeB)", "pred": "2. eNB (evolved NodeB)", "correct": true}
+{"index": 357, "ref": "2. OR.ESTACALL.IncompMossmsProtocolErr", "pred": "2. OR.ESTACALL.IncompM", "correct": true}
+{"index": 358, "ref": "4. All of the above", "pred": "4. All of the above", "correct": true}
+{"index": 359, "ref": "4. Allows for the creation of O-RAN Cloudified Network Functions", "pred": "3. Provides cost management", "correct": false}
+{"index": 360, "ref": "1. In the SgNB-DU F1 logs", "pred": "1. In the SgNB-DU F", "correct": true}
+{"index": 361, "ref": "1.  A number less than or equal to (n)", "pred": "1. A number less than or equal to (", "correct": true}
+{"index": 362, "ref": "1. O-RAN ALLIANCE e.V.", "pred": "1. O-RAN ALLIANCE e.V", "correct": true}
+{"index": 363, "ref": "1. Management and Orchestration", "pred": "1. Management and Orchestration", "correct": true}
+{"index": 364, "ref": "2. Hardware Accelerator", "pred": "2. Hardware Accelerator", "correct": true}
+{"index": 365, "ref": "1. Picocell", "pred": "4. Outdoor Macrocell (OMAC)", "correct": false}
+{"index": 366, "ref": "2. To resolve potential conflicts between xApps.", "pred": "2. To resolve potential conflicts between xApps.", "correct": true}
+{"index": 367, "ref": "2. The types of data an xApp consumes and generates.", "pred": "2. The types of data an xApp consumes", "correct": true}
+{"index": 368, "ref": "2. RIC Control Outcome approach", "pred": "2. RIC Control Outcome approach", "correct": true}
+{"index": 369, "ref": "1. CMP-Compressed-Measured-Power-PDSCH0, CMP-Compressed-Measured-Power-PDSCH1, CMP-Compressed-Measured-Power-PDSCH2", "pred": "1. CMP-Compressed-Measured-P", "correct": true}
+{"index": 370, "ref": "4. Shared ORU Multi-Operator", "pred": "1. Configurable TDD Pattern Support", "correct": false}
+{"index": 371, "ref": "1. Open Radio Access Network Alliance", "pred": "1. Open Radio Access Network Alliance", "correct": true}
+{"index": 372, "ref": "4. version", "pred": "2. versionOrRelease", "correct": false}
+{"index": 373, "ref": "2. Packet switching", "pred": "2. Packet switching", "correct": true}
+{"index": 374, "ref": "3. A link failure on an intermediary node along the traffic path", "pred": "3. A link failure on an intermediary node along", "correct": true}
+{"index": 375, "ref": "1. It allows for the creation of multiple logical topologies within an IGP domain.", "pred": "1. It allows for the creation of multiple logical", "correct": true}
+{"index": 376, "ref": "3. The test is considered successful with remarks.", "pred": "2. The test is considered successful.", "correct": false}
+{"index": 377, "ref": "4. UE (User Equipment)", "pred": "4. UE (User Equipment)", "correct": true}
+{"index": 378, "ref": "1. To allow the licensor to suspend the license against a licensee who brings a patent infringement suit against the licensing party.", "pred": "1. To allow the licensor to suspend the", "correct": true}
+{"index": 379, "ref": "2. Non-exclusive, non-transferable, irrevocable", "pred": "4. Non-exclusive, transferable, irrev", "correct": false}
+{"index": 380, "ref": "3. Test Equipment O-DU (TED)", "pred": "2. O-RU Emulator", "correct": false}
+{"index": 381, "ref": "2. must", "pred": "4. can", "correct": false}
+{"index": 382, "ref": "1. To connect the cell site to the mobile core.", "pred": "1. To connect the cell site to the mobile", "correct": true}
+{"index": 383, "ref": "2. Configuring the O-RU for operation using M-Plane commands.", "pred": "2. Configuring the O-RU for operation", "correct": true}
+{"index": 384, "ref": "2. 45", "pred": "2. 45", "correct": true}
+{"index": 385, "ref": "4. Connecting the DUT and TER to the O-RU", "pred": "4. Connecting the DUT and TER to the", "correct": true}
+{"index": 386, "ref": "1. To monitor the operation of the fronthaul between O-DUs and the shared O-RU.", "pred": "1. To monitor the operation of the fronth", "correct": true}
+{"index": 387, "ref": "1. To handle radio frequency (RF) signal processing and transmit/receive data to the O-RU.", "pred": "1. To handle radio frequency (RF) signal", "correct": true}
+{"index": 388, "ref": "2. The number of RRC connection setup requests that are retransmitted.", "pred": "2. The number of RRC connection setup requests", "correct": true}
+{"index": 389, "ref": "3. Whether the last 28 bits of the Section Extension 5 parameters are all set to 0.", "pred": "3. Whether the last 28 bits of", "correct": true}
+{"index": 390, "ref": "4. To act as an opaque artifact containing cloud-specific instructions for deployment.", "pred": "3. To define the cloud capabilities and capacities required", "correct": false}
+{"index": 391, "ref": "4. All of the above", "pred": "4. All of the above", "correct": true}
+{"index": 392, "ref": "1. Loop 1", "pred": "1. Loop 1", "correct": true}
+{"index": 393, "ref": "2. Non-exclusive, non-transferable, irrevocable, non-sublicensable", "pred": "2. Non-exclusive, non-transferable, ir", "correct": true}
+{"index": 394, "ref": "2. It removes line coding bits.", "pred": "4. It packetizes the entire data stream.", "correct": false}
+{"index": 395, "ref": "1. One or more DDDSs of MgNB-CU captured after the beginning of step 8 have Lost Packet Report IE with the value ‘1’.", "pred": "1. One or more DDDSs of Mg", "correct": true}
+{"index": 396, "ref": "2. Accept", "pred": "2. Accept", "correct": true}
+{"index": 397, "ref": "1. FH-eCPRI", "pred": "1. FH-eCPRI", "correct": true}
+{"index": 398, "ref": "1. 1100ns", "pred": "3. 500ns", "correct": false}
+{"index": 399, "ref": "2. To verify the accuracy of the signal transmission and reception.", "pred": "2. To verify the accuracy of the signal transmission", "correct": true}
+{"index": 400, "ref": "1. The O-RU and O-DU must be connected to a common PRTC via a chain of T-BCs.", "pred": "1. The O-RU and O-DU", "correct": true}
+{"index": 401, "ref": "4. Section extension 6 is used for sections that have a non-contiguous set of symbols and overlap with other signals.", "pred": "4. Section extension 6 is used for sections", "correct": true}
+{"index": 402, "ref": "3. ≤190ns", "pred": "3. ≤190ns", "correct": true}
+{"index": 403, "ref": "1. To establish the connection between the O-RU and the O-DU.", "pred": "1. To establish the connection between the O-R", "correct": true}
+{"index": 404, "ref": "1. The secondary O-DU takes over as the primary.", "pred": "1. The secondary O-DU takes over as", "correct": true}
+{"index": 405, "ref": "2. To initiate and manage the reset process of PNFs.", "pred": "2. To initiate and manage the reset process of", "correct": true}
+{"index": 406, "ref": "2.  Performs the upper layer L2 and L3 functions of the network.", "pred": "2. Performs the upper layer L2 and L", "correct": true}
+{"index": 407, "ref": "2. AI/ML training services producer rApp", "pred": "1. AI/ML workflow functions", "correct": false}
+{"index": 408, "ref": "1. o-ran-xxx.yang", "pred": "1. o-ran-xxx.yang", "correct": true}
+{"index": 409, "ref": "2. To monitor the health and capacity of the O-Cloud Infrastructure components.", "pred": "2. To monitor the health and capacity of the", "correct": true}
+{"index": 410, "ref": "2. X2 logs", "pred": "1. S1 logs", "correct": false}
+{"index": 411, "ref": "2. To verify the functionality of the user plane data transmission.", "pred": "1. To ensure efficient communication between the Application Test", "correct": false}
+{"index": 412, "ref": "2. Sync-E and PTP should always be driven from the same PRTC/T-GM source, even if they take different network paths.", "pred": "1. Sync-E and PTP should always be", "correct": false}
+{"index": 413, "ref": "3. The test is considered failed due to the policyTypeId not being supported.", "pred": "1. The test is considered passed if the policy", "correct": false}
+{"index": 414, "ref": "2. The rApp acts as a service producer, requesting the deregistration of a service.", "pred": "1. The rApp acts as a service consumer", "correct": false}
+{"index": 415, "ref": "4.  Connecting the signal source to the O-RU antenna port", "pred": "4. Connecting the signal source to the O-R", "correct": true}
+{"index": 416, "ref": "2. ≤60ns (FR2)", "pred": "1. ≤100ns (FR1", "correct": false}
+{"index": 417, "ref": "2. O-RAN.WG1.OAD", "pred": "2. O-RAN.WG1.OAD", "correct": true}
+{"index": 418, "ref": "3. 405 - Method Not Allowed", "pred": "3. 405 - Method Not Allowed", "correct": true}
+{"index": 419, "ref": "2. Hybrid Automatic Repeat request", "pred": "2. Hybrid Automatic Repeat request", "correct": true}
+{"index": 420, "ref": "3. To support both multiple O-DUs from the same operator and multiple O-DUs from different operators.", "pred": "2. To support multiple O-DUs from different", "correct": false}
+{"index": 421, "ref": "2. O1", "pred": "1. R1", "correct": false}
+{"index": 422, "ref": "3. The TDD_CONFIG_PATTERN command applies to both UL and DL regardless of the 'dataDirection' bit in the Section Header.", "pred": "3. The TDD_CONFIG_PATTERN command applies to", "correct": true}
+{"index": 423, "ref": "1. Defining testing requirements for an Open Xhaul transport infrastructure.", "pred": "1. Defining testing requirements for an Open X", "correct": true}
+{"index": 424, "ref": "2. Affiliate", "pred": "2. Affiliate", "correct": true}
+{"index": 425, "ref": "2. SSH or TLS session establishment", "pred": "2. SSH or TLS session establishment", "correct": true}
+{"index": 426, "ref": "4. All of the above.", "pred": "4. All of the above.", "correct": true}
+{"index": 427, "ref": "1. To provide a mechanism for managing and orchestrating network connectivity between NF Deployments.", "pred": "1. To provide a mechanism for managing and orchestr", "correct": true}
+{"index": 428, "ref": "1. Conformance certification, IOT badging, E2E badging", "pred": "1. Conformance certification, IOT badging", "correct": true}
+{"index": 429, "ref": "3.  Manages the connection between the O-RU and the O-CU.", "pred": "3. Manages the connection between the O-R", "correct": true}
+{"index": 430, "ref": "2. It consults the SM Catalog module to identify the relevant SM specific modules and APIs.", "pred": "3. It maps E2 messages to their corresponding", "correct": false}
+{"index": 431, "ref": "2. SNSSAI", "pred": "2. SNSSAI", "correct": true}
+{"index": 432, "ref": "2. NFV", "pred": "2. NFV", "correct": true}
+{"index": 433, "ref": "3. By configuring them from the SMO using an aggregation model based on the O-RAN WG4 data model.", "pred": "3. By configuring them from the SMO using", "correct": true}
+{"index": 434, "ref": "1. JSON/XML/YANG-encoded messages", "pred": "1. JSON/XML/YANG-encoded messages", "correct": true}
+{"index": 435, "ref": "2. To detect changes in performance between the active slave port and the alternate passive port.", "pred": "2. To detect changes in performance between the active", "correct": true}
+{"index": 436, "ref": "3. To reduce power consumption by switching off certain RF channels in massive MIMO deployments.", "pred": "3. To reduce power consumption by switching off certain", "correct": true}
+{"index": 437, "ref": "2. It can trigger subscription to the function for reporting style 2, with at least two measurement information.", "pred": "1. It can trigger subscription to the function for", "correct": false}
+{"index": 438, "ref": "4. Modulation Compression Scaling", "pred": "4. Modulation Compression Scaling", "correct": true}
+{"index": 439, "ref": "1. Loopback configuration", "pred": "1. Loopback configuration", "correct": true}
+{"index": 440, "ref": "2. Shared O-RU", "pred": "2. Shared O-RU", "correct": true}
+{"index": 441, "ref": "1. Only PRBs addressed by section descriptions with the same sectionId as the user plane data section are present in the user plane data section.", "pred": "1. Only PRBs addressed by section descriptions with", "correct": true}
+{"index": 442, "ref": "3. To trigger the O-RU8 to start collecting and storing troubleshooting logs in a file.", "pred": "3. To trigger the O-RU8 to", "correct": true}
+{"index": 443, "ref": "2. O-RAN ALLIANCE", "pred": "2. O-RAN ALLIANCE", "correct": true}
+{"index": 444, "ref": "1. To verify the E2 Node's ability to handle invalid RAN Function IDs during RIC Subscription deletion.", "pred": "1. To verify the E2 Node's ability", "correct": true}
+{"index": 445, "ref": "3. Guarantees dedicated CPU resources for virtualized O-RAN components like vO-DU and vO-CU.", "pred": "3. Guarantees dedicated CPU resources for virtual", "correct": true}
+{"index": 446, "ref": "2. Verifying that the user plane data transferred over the X2 interface in both directions is successfully received without packet losses.", "pred": "2. Verifying that the user plane data transferred", "correct": true}
+{"index": 447, "ref": "1. The specific frequency band and sub-carrier spacing used.", "pred": "1. The specific frequency band and sub-carrier", "correct": true}
+{"index": 448, "ref": "2. To transmit data using a new PN23 sequence.", "pred": "2. To transmit data using a new PN2", "correct": true}
+{"index": 449, "ref": "1. Data Registration", "pred": "1. Data Registration", "correct": true}
+{"index": 450, "ref": "1. A specific converter within the O-RAN architecture.", "pred": "2. The number of transmit and receive paths in", "correct": false}
+{"index": 451, "ref": "2. RFC 5329", "pred": "3. RFC 5420", "correct": false}
+{"index": 452, "ref": "2. PolicyTypeId", "pred": "2. PolicyTypeId", "correct": true}
+{"index": 453, "ref": "1. Defining best practices for O-RAN Architecture and Solution for X-haul timing and synchronization.", "pred": "1. Defining best practices for O-RAN", "correct": true}
+{"index": 454, "ref": "2. To establish a standardized way of representing information in O-RAN systems.", "pred": "2. To establish a standardized way of representing information", "correct": true}
+{"index": 455, "ref": "1. To measure the distribution of RARs with different values of NTA.", "pred": "1. To measure the distribution of RARs", "correct": true}
+{"index": 456, "ref": "1. To track the number of UL RLC PDUs discarded due to bearer release.", "pred": "1. To track the number of UL RLC", "correct": true}
+{"index": 457, "ref": "4. managementInterface", "pred": "4. managementInterface", "correct": true}
+{"index": 458, "ref": "2. OR.RRCCONENDC.ReconfSrb3SuccessGap", "pred": "2. OR.RRCCONENDC.Re", "correct": true}
+{"index": 459, "ref": "2. The slave node will discard the replayed message and report an error.", "pred": "2. The slave node will discard the replayed", "correct": true}
+{"index": 460, "ref": "2. To provide RF shielding and protection for the antenna and radio unit", "pred": "2. To provide RF shielding and protection for the", "correct": true}
+{"index": 461, "ref": "2. Received UL RLC PDUs", "pred": "2. Received UL RLC PDUs", "correct": true}
+{"index": 462, "ref": "2. O-DU to Transport and Transport to O-DU information", "pred": "2. O-DU to Transport and Transport to", "correct": true}
+{"index": 463, "ref": "1. By using a combination of pseudorandom number generators, timestamps, and namespace identifiers.", "pred": "1. By using a combination of pseudorandom", "correct": true}
+{"index": 464, "ref": "2. To perform upper layer (L2 and L3) functions.", "pred": "2. To perform upper layer (L2 and", "correct": true}
+{"index": 465, "ref": "4. RF Spectrum and Beam Signal Analyzer", "pred": "4. RF Spectrum and Beam Signal Analyzer", "correct": true}
+{"index": 466, "ref": "2. Building an appropriate IQ signal describing the NR-FR1-TM1.1 signal.", "pred": "3. Synchronizing the O-RU using", "correct": false}
+{"index": 467, "ref": "4. All of the above.", "pred": "4. All of the above.", "correct": true}
+{"index": 468, "ref": "1. Fault, Configuration, Accounting, Performance, Security", "pred": "1. Fault, Configuration, Accounting, Performance,", "correct": true}
+{"index": 469, "ref": "4. 04.00", "pred": "4. 04.00", "correct": true}
+{"index": 470, "ref": "2. Unique SRO-Id", "pred": "2. Unique SRO-Id", "correct": true}
+{"index": 471, "ref": "2. 204", "pred": "2. 204", "correct": true}
+{"index": 472, "ref": "1. To store and manage alarm definitions for different entities in the network.", "pred": "1. To store and manage alarm definitions for different", "correct": true}
+{"index": 473, "ref": "1. Internal connection points connect to the internal virtual links of an NF Deployment, while external connection points connect the NF Deployment to external virtual links.", "pred": "1. Internal connection points connect to the internal virtual", "correct": true}
+{"index": 474, "ref": "2. To verify that the O-DU can detect and prevent unauthorized configuration changes.", "pred": "2. To verify that the O-DU can", "correct": true}
+{"index": 475, "ref": "1.  Provides FCAPS management for the O-DU.", "pred": "1. Provides FCAPS management for the O-D", "correct": true}
+{"index": 476, "ref": "1. To verify the O-RU's ability to transmit a basic 3GPP test frame without beamforming.", "pred": "1. To verify the O-RU's ability", "correct": true}
+{"index": 477, "ref": "4. Collecting O-RU capabilities and configuring it for operation.", "pred": "4. Collecting O-RU capabilities and configuring", "correct": true}
+{"index": 478, "ref": "2.  Process and transmit radio signals.", "pred": "2. Process and transmit radio signals.", "correct": true}
+{"index": 479, "ref": "2. To ensure the radio can receive a basic 3GPP test frame with weight-based beamforming.", "pred": "1. To ensure the radio can transmit a basic", "correct": false}
+{"index": 480, "ref": "3. RIC Actions Added List IE", "pred": "3. RIC Actions Added List IE", "correct": true}
+{"index": 481, "ref": "2. ITU-T G.8262/G.8262.1", "pred": "1. ITU-T G.827", "correct": false}
+{"index": 482, "ref": "2. Semi-persistent scheduling (SPS)", "pred": "4. Configuration of CQI table", "correct": false}
+{"index": 483, "ref": "2. To confirm the successful completion of a Radio Link Outage operation.", "pred": "1. To initiate a Radio Link Outage operation", "correct": false}
+{"index": 484, "ref": "3. Usage Scenarios", "pred": "3. Usage Scenarios", "correct": true}
+{"index": 485, "ref": "2. Monitoring network performance", "pred": "1. Deleting outdated policies", "correct": false}
+{"index": 486, "ref": "1. 8", "pred": "1. 8", "correct": true}
+{"index": 487, "ref": "2. To report the success or failure of the UE identification process.", "pred": "2. To report the success or failure of the", "correct": true}
+{"index": 488, "ref": "2. Must", "pred": "4. Can", "correct": false}
+{"index": 489, "ref": "3. The average number of bytes per event, calculated by dividing the total byte count by the number of events.", "pred": "3. The average number of bytes per event,", "correct": true}
+{"index": 490, "ref": "4. All of the above.", "pred": "4. All of the above.", "correct": true}
+{"index": 491, "ref": "4. Network Management System", "pred": "4. Network Management System", "correct": true}
+{"index": 492, "ref": "4. All of the above", "pred": "3. apiSuppFeats", "correct": false}
+{"index": 493, "ref": "1. To develop and promote open, interoperable radio access networks.", "pred": "1. To develop and promote open, interoperable", "correct": true}
+{"index": 494, "ref": "1. A system where the O-RU, O-DU, and O-CU are implemented on a single platform, eliminating the need for fronthaul and F1 interfaces.", "pred": "1. A system where the O-RU,", "correct": true}
+{"index": 495, "ref": "1. Increased complexity in DCCF/MFAF configuration for distinguishing between instances.", "pred": "1. Increased complexity in DCCF/MFA", "correct": true}
+{"index": 496, "ref": "1. PTP automatically switches to a different link within the LAG bundle.", "pred": "1. PTP automatically switches to a different link", "correct": true}
+{"index": 497, "ref": "1.  O-RAN ALLIANCE e.V.", "pred": "1. O-RAN ALLIANCE e.V", "correct": true}
+{"index": 498, "ref": "3. name", "pred": "3. name", "correct": true}
+{"index": 499, "ref": "1. O-RAN ALLIANCE e.V.", "pred": "1. O-RAN ALLIANCE e.V", "correct": true}
+{"index": 500, "ref": "2. An AAL-LPU is a virtual entity that maps to a single HW Accelerator.", "pred": "2. An AAL-LPU is a virtual", "correct": true}
+{"index": 501, "ref": "2. The maximum deviation from the expected packet arrival time in the downlink.", "pred": "2. The maximum deviation from the expected packet arrival", "correct": true}
+{"index": 502, "ref": "1. Slice ID/sNSSAI and slice priority", "pred": "1. Slice ID/sNSSAI and slice priority", "correct": true}
+{"index": 503, "ref": "2. By performing an alarm query with appropriate criteria, such as requesting all alarms with cleared status.", "pred": "2. By performing an alarm query with appropriate criteria", "correct": true}
+{"index": 504, "ref": "3. O-CU", "pred": "3. O-CU", "correct": true}
+{"index": 505, "ref": "1.  Data transmission and control of radio resources.", "pred": "1. Data transmission and control of radio resources.", "correct": true}
+{"index": 506, "ref": "1. O-RAN.WG8.AAD", "pred": "1. O-RAN.WG8.AAD", "correct": true}
+{"index": 507, "ref": "1.  Support for non-contiguous symbol allocation for user equipment (UE)", "pred": "1. Support for non-contiguous symbol allocation for", "correct": true}
+{"index": 508, "ref": "3. ITU", "pred": "4. IEEE", "correct": false}
+{"index": 509, "ref": "1. To verify the radio's ability to transmit a basic 3GPP test frame with predefined-beams beamforming and one spatial stream.", "pred": "1. To verify the radio's ability to transmit", "correct": true}
+{"index": 510, "ref": "3. 0", "pred": "3. 0", "correct": true}
+{"index": 511, "ref": "2. The limit is specified at Reference Point A or B as defined by ITU-T G.8271.1 and G.8271.2.", "pred": "1. The limit is specified at Reference Point C", "correct": false}
+{"index": 512, "ref": "2. E2setupRequestIEs", "pred": "2. E2setupRequestIEs", "correct": true}
+{"index": 513, "ref": "1. The O-RU will synchronize the boundaries of the measurements to align with the common factor.", "pred": "1. The O-RU will synchronize the boundaries", "correct": true}
+{"index": 514, "ref": "1. Local Indoor Positioning in RAN", "pred": "1. Local Indoor Positioning in RAN", "correct": true}
+{"index": 515, "ref": "4. Received RRC: RRC Resume Complete (RRC inactive to RRC Connected with SCell addition)", "pred": "4. Received RRC: RRC Resume Complete", "correct": true}
+{"index": 516, "ref": "3. DDR", "pred": "4. OAM Port", "correct": false}
+{"index": 517, "ref": "1. To ensure that the O-RU can correctly interpret the beamforming configuration even if it doesn't fit into a single message.", "pred": "1. To ensure that the O-RU can", "correct": true}
+{"index": 518, "ref": "4. UE Emulator", "pred": "3. O-RU", "correct": false}
+{"index": 519, "ref": "1. To monitor the distribution of downlink PRB usage across different bins, providing insights into resource utilization.", "pred": "1. To monitor the distribution of downlink PR", "correct": true}
+{"index": 520, "ref": "2.  Unauthorized access and data manipulation.", "pred": "2. Unauthorized access and data manipulation.", "correct": true}
+{"index": 521, "ref": "4. Automated VPN Traffic Steering", "pred": "2. Non O-RAN Fronthaul", "correct": false}
+{"index": 522, "ref": "3. Network slicing", "pred": "3. Network slicing", "correct": true}
+{"index": 523, "ref": "2. 4334", "pred": "4. 22", "correct": false}
+{"index": 524, "ref": "2. sro-id", "pred": "2. sro-id", "correct": true}
+{"index": 525, "ref": "3. Tests marked as mandatory (M) and conditionally mandatory (CM) based on the O-DU's supported functionalities", "pred": "1. All tests specified in the O-RAN", "correct": false}
+{"index": 526, "ref": "2. The PRBs are not scheduled for this port.", "pred": "2. The PRBs are not scheduled for this", "correct": true}
+{"index": 527, "ref": "1. To provide a mechanism for the E2 node to request control of a UE's dual connectivity status from the near-RT RIC.", "pred": "1. To provide a mechanism for the E2", "correct": true}
+{"index": 528, "ref": "2.  CMPv2", "pred": "2. CMPv2", "correct": true}
+{"index": 529, "ref": "3.  To perform radio signal processing and transmit/receive radio signals.", "pred": "3. To perform radio signal processing and transmit/re", "correct": true}
+{"index": 530, "ref": "3. They are not liable for any indirect, special, incidental, punitive, or consequential damages.", "pred": "3. They are not liable for any indirect,", "correct": true}
+{"index": 531, "ref": "1. 2^16 - 1", "pred": "1. 2^16 - 1", "correct": true}
+{"index": 532, "ref": "2. NONE, DELTA, COMPLETE", "pred": "2. NONE, DELTA, COMPLETE", "correct": true}
+{"index": 533, "ref": "3. To signal whether there are additional extensions following the current one.", "pred": "3. To signal whether there are additional extensions following", "correct": true}
+{"index": 534, "ref": "3. Ensuring that L3VPN services can be successfully established and maintained across various network domains.", "pred": "3. Ensuring that L3VPN services can", "correct": true}
+{"index": 535, "ref": "3. PCIe", "pred": "1. Ethernet", "correct": false}
+{"index": 536, "ref": "4. S1-U", "pred": "1. X2-U", "correct": false}
+{"index": 537, "ref": "1. 437us", "pred": "2. 366us", "correct": false}
+{"index": 538, "ref": "4.  All of the above", "pred": "4. All of the above", "correct": true}
+{"index": 539, "ref": "1. All devices must utilize the same version or compatible versions of the O-RAN WG5 C-Plane and U-Plane profiles.", "pred": "1. All devices must utilize the same version or", "correct": true}
+{"index": 540, "ref": "3. Request for UE location update", "pred": "3. Request for UE location update", "correct": true}
+{"index": 541, "ref": "4. The licenses continue to be granted by the former Adopter.", "pred": "1. The licenses are automatically revoked.", "correct": false}
+{"index": 542, "ref": "4. 0.5ms", "pred": "3. 1ms", "correct": false}
+{"index": 543, "ref": "1. 10137.6 Mbps", "pred": "1. 10137.6", "correct": true}
+{"index": 544, "ref": "2. The number of endpoints, band number, number of arrays, and polarization.", "pred": "1. The MAC address and VLAN ID used for", "correct": false}
+{"index": 545, "ref": "2.  related-o-ru-connectors", "pred": "2. related-o-ru-connectors", "correct": true}
+{"index": 546, "ref": "1. G.8275.1 and G.8275.2", "pred": "1. G.8275.1", "correct": true}
+{"index": 547, "ref": "2. Cell Configuration and Neighbor Relation information", "pred": "2. Cell Configuration and Neighbor Relation information", "correct": true}
+{"index": 548, "ref": "1. O-RAN ALLIANCE e.V.", "pred": "1. O-RAN ALLIANCE e.V", "correct": true}
+{"index": 549, "ref": "4. All of the above", "pred": "4. All of the above", "correct": true}
+{"index": 550, "ref": "2. -40°C to +55°C", "pred": "2. -40°C to +55", "correct": true}
+{"index": 551, "ref": "2. Trusted Platform Module (TPM)", "pred": "2. Trusted Platform Module (TPM)", "correct": true}
+{"index": 552, "ref": "3. 'static-tx-endpoint' is a new definition with reference to 'static-low-level-tx-endpoint', and both are supported in CPRI Option8.", "pred": "1. 'static-tx-endpoint' is", "correct": false}
+{"index": 553, "ref": "3. copy-config", "pred": "4. close-session", "correct": false}
+{"index": 554, "ref": "1.  It identifies the specific schema type used by a data producer to deliver data.", "pred": "1. It identifies the specific schema type used by", "correct": true}
+{"index": 555, "ref": "4. User Management interfaces", "pred": "4. User Management interfaces", "correct": true}
+{"index": 556, "ref": "2. The control plane responsible for real-time control between the O-DU and the O-RU.", "pred": "2. The control plane responsible for real-time control", "correct": true}
+{"index": 557, "ref": "2. E2", "pred": "2. E2", "correct": true}
+{"index": 558, "ref": "2. To validate the received E2 messages against specified requirements.", "pred": "2. To validate the received E2 messages against", "correct": true}
+{"index": 559, "ref": "2. The SMO manages the O-RUs directly over the Fronthaul M-plane interface.", "pred": "4. The SMO coordinates with the O-D", "correct": false}
+{"index": 560, "ref": "3. O-DU", "pred": "3. O-DU", "correct": true}
+{"index": 561, "ref": "1. To provide a stable and accurate time reference for synchronization within the network.", "pred": "1. To provide a stable and accurate time reference", "correct": true}
+{"index": 562, "ref": "1. Start-up installation, software management, provisioning, performance, fault, and file management", "pred": "1. Start-up installation, software management, provisioning", "correct": true}
+{"index": 563, "ref": "2. To validate that no configured assistance information is being reported at this point.", "pred": "2. To validate that no configured assistance information is", "correct": true}
+{"index": 564, "ref": "3.  Ensuring compatibility with legacy network equipment", "pred": "3. Ensuring compatibility with legacy network equipment", "correct": true}
+{"index": 565, "ref": "1. A1 Application data model", "pred": "1. A1 Application data model", "correct": true}
+{"index": 566, "ref": "2. ≤1100ns", "pred": "1. ≤190ns (FR1", "correct": false}
+{"index": 567, "ref": "2. Configure the O-RU for operation using M-Plane commands.", "pred": "1. Connect the signal analyzer to the O-R", "correct": false}
+{"index": 568, "ref": "2. Profile mode that allows for configurable packet rates.", "pred": "2. Profile mode that allows for configurable packet rates", "correct": true}
+{"index": 569, "ref": "2. To provide a collaborative environment for testing and integrating O-RAN components.", "pred": "2. To provide a collaborative environment for testing and", "correct": true}
+{"index": 570, "ref": "1. The O-RAN ALLIANCE e.V.", "pred": "1. The O-RAN ALLIANCE e", "correct": true}
+{"index": 571, "ref": "4. Temperature", "pred": "4. Temperature", "correct": true}
+{"index": 572, "ref": "1. To provide a standardized interface for real-time and non-real-time cooperation between the eNB/gNB and resource allocation based transport networks.", "pred": "1. To provide a standardized interface for real-time", "correct": true}
+{"index": 573, "ref": "4. Number of times the network has been rebooted", "pred": "4. Number of times the network has been reboot", "correct": true}
+{"index": 574, "ref": "2. To provide a standardized interface between the O-RAN Radio Unit and the O-RAN Control Unit.", "pred": "2. To provide a standardized interface between the O", "correct": true}
+{"index": 575, "ref": "2. RU", "pred": "1. O-RU", "correct": false}
+{"index": 576, "ref": "2. O-DU or CU", "pred": "2. O-DU or CU", "correct": true}
+{"index": 577, "ref": "3. Configure A1 policy parameters", "pred": "3. Configure A1 policy parameters", "correct": true}
+{"index": 578, "ref": "2. To identify a dynamic set of UEs that share the same policy.", "pred": "1. To define a specific UE group and enable", "correct": false}
+{"index": 579, "ref": "3. The eNB considers it equivalent to a decoding error.", "pred": "3. The eNB considers it equivalent to a", "correct": true}
+{"index": 580, "ref": "3. Performs Low-PHY layer and RF processing based on a lower layer functional split.", "pred": "3. Performs Low-PHY layer and RF processing", "correct": true}
+{"index": 581, "ref": "4. All of the above", "pred": "4. All of the above", "correct": true}
+{"index": 582, "ref": "4. D-Plane", "pred": "4. D-Plane", "correct": true}
+{"index": 583, "ref": "2. Two", "pred": "2. Two", "correct": true}
+{"index": 584, "ref": "1. HTMC (Head End to Tail End Message Channel) and THMC (Tail End to Head-End Message Channel)", "pred": "1. HTMC (Head End to Tail End", "correct": true}
+{"index": 585, "ref": "4. The A1 interface connectivity between the Near-RT RIC and the Non-RT RIC is established.", "pred": "4. The A1 interface connectivity between the Near", "correct": true}
+{"index": 586, "ref": "3. GET", "pred": "3. GET", "correct": true}
+{"index": 587, "ref": "3. RIC Query Request", "pred": "3. RIC Query Request", "correct": true}
+{"index": 588, "ref": "3.  Full PTP support (G.8275.1) is optional for O-RAN deployments.", "pred": "2. Full PTP support (G.8", "correct": false}
+{"index": 589, "ref": "3.  must, must not", "pred": "2. will, will not, can, cannot", "correct": false}
+{"index": 590, "ref": "2. Field Programmable Gate Array", "pred": "2. Field Programmable Gate Array", "correct": true}
+{"index": 591, "ref": "2. Implementing clock source redundancy with a remote T-GM as a backup.", "pred": "2. Implementing clock source redundancy with a remote", "correct": true}
+{"index": 592, "ref": "4. UE_IP", "pred": "4. UE_IP", "correct": true}
+{"index": 593, "ref": "2. 3GPP TS 38.211", "pred": "2. 3GPP TS 38", "correct": true}
+{"index": 594, "ref": "2. DDR memory", "pred": "2. DDR memory", "correct": true}
+{"index": 595, "ref": "4. Background and goal", "pred": "4. Background and goal", "correct": true}
+{"index": 596, "ref": "2. To represent a single registered DME type production capability.", "pred": "2. To represent a single registered DME type", "correct": true}
+{"index": 597, "ref": "1. O-RAN ALLIANCE e.V.", "pred": "1. O-RAN ALLIANCE e.V", "correct": true}
+{"index": 598, "ref": "3. fault-management", "pred": "4. streams", "correct": false}
+{"index": 599, "ref": "4. Antenna", "pred": "4. Antenna", "correct": true}

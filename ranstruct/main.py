@@ -79,7 +79,9 @@ def cmd_run(args):
         top_k=args.top_k,
         output_format=args.format,
         enable_post_process=not args.no_post_process,
-        strict_mode=args.strict
+        strict_mode=args.strict,
+        shard_id=args.shard_id,
+        num_shards=args.num_shards
     )
     
     print("\n" + "=" * 50)
@@ -365,8 +367,8 @@ def main():
     run_parser.add_argument('--questions-per-chunk', type=int, help='每 chunk 问题数')
     run_parser.add_argument('--top-k', type=int, help='RAG Top-K')
     run_parser.add_argument('--format', default='jsonl', 
-                           choices=['jsonl', 'json', 'training', 'conversation'],
-                           help='输出格式')
+                           choices=['jsonl', 'json', 'training', 'training_system', 'conversation', 'chatml'],
+                           help='输出格式 (推荐 chatml 用于 Qwen SFT)')
     run_parser.add_argument('--no-post-process', action='store_true', 
                            help='禁用质量后处理')
     run_parser.add_argument('--strict', action='store_true',
@@ -375,6 +377,8 @@ def main():
                            help='测试模式：等效于 --max-chunks 10')
     run_parser.add_argument('--timestamp', action='store_true',
                            help='使用时间戳文件名（防止覆盖）')
+    run_parser.add_argument('--shard-id', type=int, help='当前分片ID (0-N)')
+    run_parser.add_argument('--num-shards', type=int, help='总分片数')
     run_parser.set_defaults(func=cmd_run)
     
     # step1 命令
@@ -404,8 +408,8 @@ def main():
     step5_parser.add_argument('--qa-file', help='问答对文件路径')
     step5_parser.add_argument('--output', '-o', help='输出文件路径')
     step5_parser.add_argument('--format', default='jsonl',
-                             choices=['jsonl', 'json', 'training', 'conversation'],
-                             help='输出格式')
+                             choices=['jsonl', 'json', 'training', 'training_system', 'conversation', 'chatml'],
+                             help='输出格式 (推荐 chatml 用于 Qwen SFT)')
     step5_parser.set_defaults(func=cmd_step5)
     
     # step6 命令

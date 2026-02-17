@@ -14,6 +14,10 @@ from pathlib import Path
 from typing import List, Dict, Optional, Tuple, Any
 import numpy as np
 
+# 设置 HuggingFace 镜像源（解决国内网络问题）
+if 'HF_ENDPOINT' not in os.environ:
+    os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
+
 try:
     import faiss
 except ImportError:
@@ -36,6 +40,12 @@ logger = logging.getLogger(__name__)
 class EmbeddingGenerator:
     """嵌入向量生成器"""
     
+    # 本地模型路径优先级
+    LOCAL_MODEL_PATHS = [
+        "/app/models/bge-small-en-v1.5",  # Docker 容器挂载路径
+        "models/bge-small-en-v1.5",        # 项目相对路径
+    ]
+    
     def __init__(self, model_name: str = "BAAI/bge-small-en-v1.5", device: str = "cuda"):
         """
         初始化嵌入生成器
@@ -50,8 +60,20 @@ class EmbeddingGenerator:
         self.model_name = model_name
         self.device = device
         
-        logger.info(f"正在加载嵌入模型: {model_name}")
-        self.model = SentenceTransformer(model_name, device=device)
+        # 优先使用本地模型（避免网络下载）
+        local_path = None
+        for path in self.LOCAL_MODEL_PATHS:
+            if os.path.exists(path):
+                local_path = path
+                break
+        
+        if local_path:
+            logger.info(f"使用本地嵌入模型: {local_path}")
+            self.model = SentenceTransformer(local_path, device=device)
+        else:
+            logger.info(f"正在加载嵌入模型: {model_name}")
+            self.model = SentenceTransformer(model_name, device=device)
+        
         self.dimension = self.model.get_sentence_embedding_dimension()
         logger.info(f"嵌入维度: {self.dimension}")
     
@@ -115,15 +137,32 @@ class FAISSManager:
         self._gpu_resources = None
     
     def _check_gpu_available(self) -> bool:
-        """检查 GPU 是否可用"""
+        """检查 GPU 是否可用于 FAISS"""
+        # 检查环境变量，允许强制禁用 GPU
+        if os.environ.get('FAISS_NO_GPU', '').lower() in ('1', 'true', 'yes'):
+            logger.info("检测到 FAISS_NO_GPU 环境变量，使用 CPU 模式")
+            return False
+        
         try:
             num_gpus = faiss.get_num_gpus()
             if num_gpus > 0:
+                # 检查 CUDA 版本兼容性
+                # faiss-gpu PyPI 包通常只支持 CUDA 11.x
+                # CUDA 12.x 需要 conda 安装或 faiss-cpu
+                import torch
+                cuda_version = torch.version.cuda if torch.cuda.is_available() else "0"
+                if cuda_version and cuda_version.startswith("12"):
+                    logger.warning(f"检测到 CUDA {cuda_version}，faiss-gpu PyPI 包可能不兼容")
+                    logger.warning("建议设置 FAISS_NO_GPU=1 使用 CPU 模式，或通过 conda 安装 faiss-gpu")
+                    logger.info("自动回退到 CPU 模式以避免卡死")
+                    return False
+                
                 logger.info(f"检测到 {num_gpus} 个 GPU，将使用 GPU 加速 FAISS")
                 return True
-        except:
-            pass
-        logger.info("未检测到 GPU 或 faiss-gpu 未安装，使用 CPU 模式")
+        except Exception as e:
+            logger.warning(f"检查 GPU 时出错: {e}")
+        
+        logger.info("使用 CPU 模式")
         return False
     
     def _to_gpu(self, index: faiss.Index) -> faiss.Index:
@@ -131,12 +170,19 @@ class FAISSManager:
         if not self._use_gpu:
             return index
         
+        # 检查环境变量，允许强制禁用 GPU
+        if os.environ.get('FAISS_NO_GPU', '').lower() in ('1', 'true', 'yes'):
+            logger.info("检测到 FAISS_NO_GPU 环境变量，跳过 GPU 加速")
+            return index
+        
         try:
+            logger.info("正在初始化 GPU 资源...")
             if self._gpu_resources is None:
                 self._gpu_resources = faiss.StandardGpuResources()
-                # 限制 GPU 内存使用 (为其他任务预留空间，4080 有 16GB)
-                self._gpu_resources.setTempMemory(1024 * 1024 * 1024)  # 1GB
+                # 限制 GPU 内存使用 (为其他任务预留空间)
+                self._gpu_resources.setTempMemory(512 * 1024 * 1024)  # 512MB
             
+            logger.info("正在执行 index_cpu_to_gpu...")
             gpu_index = faiss.index_cpu_to_gpu(self._gpu_resources, 0, index)
             logger.info("FAISS 索引已转移到 GPU")
             return gpu_index
@@ -401,19 +447,28 @@ class FAISSManager:
         if not index_file.exists():
             raise FileNotFoundError(f"索引文件不存在: {index_file}")
         
+        logger.info(f"正在加载 FAISS 索引文件: {index_file}")
         self.index = faiss.read_index(str(index_file))
-        logger.info(f"已从 {index_file} 加载 FAISS 索引 (包含 {self.index.ntotal} 个向量)")
+        logger.info(f"已加载 FAISS 索引 (包含 {self.index.ntotal} 个向量)")
         
         # 转移到 GPU (如果可用)
         if self._use_gpu:
+            logger.info("正在将索引转移到 GPU...")
             self.gpu_index = self._to_gpu(self.index)
+            logger.info("GPU 索引转移完成")
         
         # 加载元数据
         metadata_file = path / "index.pkl"
         if metadata_file.exists():
+            # 检查文件大小
+            file_size_mb = metadata_file.stat().st_size / (1024 * 1024)
+            logger.info(f"正在加载元数据文件: {metadata_file} ({file_size_mb:.1f} MB)")
+            
             try:
                 with open(metadata_file, 'rb') as f:
                     metadata = pickle.load(f)
+                
+                logger.info("元数据文件加载完成，正在解析...")
                 
                 # 检查是否为我们的格式 (dict) 还是 LangChain 格式 (tuple)
                 if isinstance(metadata, dict):

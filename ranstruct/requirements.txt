@@ -2,7 +2,7 @@
 # 针对 RTX 4080 (16GB) 优化
 
 # 核心依赖
-numpy>=1.21.0
+numpy>=1.21.0,<2.0  # faiss 不兼容 NumPy 2.x
 pyyaml>=6.0
 
 # Ollama Python 客户端

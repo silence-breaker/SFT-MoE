@@ -1,0 +1,81 @@
+# ============================================================================
+# SFT 训练 Docker Compose 配置
+# Qwen3-30B-A3B-Instruct-2507 LoRA + DeepSpeed ZeRO-3 (LLaMA-Factory)
+# ============================================================================
+#
+# 使用方法:
+#   # 启动训练
+#   docker compose -f docker-compose.train.yml run --rm train bash /app/scripts/run_train_test.sh _train
+#
+#   # 进入交互式 shell
+#   docker compose -f docker-compose.train.yml run --rm train bash
+#
+#   # 合并 LoRA 权重
+#   docker compose -f docker-compose.train.yml run --rm train \
+#       llamafactory-cli export --model_name_or_path /app/model \
+#       --adapter_name_or_path /app/output/checkpoint-xxx \
+#       --template qwen3 --finetuning_type lora --export_dir /app/output/merged
+#
+#   # 推理验证
+#   docker compose -f docker-compose.train.yml run --rm train \
+#       llamafactory-cli chat --model_name_or_path /app/model \
+#       --adapter_name_or_path /app/output/checkpoint-xxx \
+#       --template qwen3 --finetuning_type lora
+# ============================================================================
+
+services:
+  train:
+    build:
+      context: .
+      dockerfile: Dockerfile.train
+    image: sft-train:latest
+    container_name: sft-train
+    
+    # GPU 配置: 使用全部 8 卡
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    
+    # DeepSpeed 多卡通信需要大 shared memory
+    shm_size: "64g"
+    
+    # 环境变量
+    environment:
+      - CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NCCL_P2P_DISABLE=0
+      - NCCL_IB_DISABLE=1
+      - HF_ENDPOINT=${HF_ENDPOINT:-https://huggingface.co}
+    
+    # 卷挂载 (默认路径相对于 ~/ranstruct_workplace/train/)
+    volumes:
+      # 训练/验证数据集
+      - ${DATASET_DIR:-../output/dataset}:/app/data
+      # 模型权重 (Qwen3-30B-A3B-Instruct-2507)
+      - ${MODEL_DIR:-../models/Qwen3-30B-A3B-Instruct-2507}:/app/model
+      # 训练输出 (checkpoints, 日志)
+      - ${OUTPUT_DIR:-./output}:/app/output
+      # HuggingFace 缓存
+      - ${HF_CACHE_DIR:-../hf_cache}:/root/.cache/huggingface
+      # 训练脚本
+      - ./run_train_test.sh:/app/scripts/run_train_test.sh
+      # LLaMA-Factory 配置
+      - ./train_config.yaml:/app/config/train_config.yaml
+      - ./ds_z3_config.json:/app/config/ds_z3_config.json
+      # dataset_info.json 必须和数据文件在同一目录
+      - ./dataset_info.json:/app/data/dataset_info.json
+    
+    working_dir: /app
+    
+    stdin_open: true
+    tty: true
+    
+    # 网络模式: host 模式，避免 NCCL 通信问题
+    network_mode: host
+    
+    # IPC 模式: host，DeepSpeed 需要
+    ipc: host

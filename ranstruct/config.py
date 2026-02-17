@@ -18,16 +18,16 @@ from typing import Optional, List
 class ModelConfig:
     """模型配置"""
     # Ollama 配置
-    ollama_base_url: str = "http://localhost:11434"
-    ollama_models_path: str = "D:/Ollama/Models"
+    ollama_base_url: str = field(default_factory=lambda: os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"))
+    ollama_models_path: str = field(default_factory=lambda: os.getenv("OLLAMA_MODELS_PATH", "D:/Ollama/Models" if os.name == 'nt' else "/root/.ollama/models"))
     
     # 问题生成模型
-    question_model: str = "mistral:latest"
+    question_model: str = field(default_factory=lambda: os.getenv("QUESTION_MODEL", "mistral:latest"))
     question_model_temperature: float = 0.7
     question_model_top_p: float = 0.9
     
     # 答案生成模型
-    answer_model: str = "qwen2.5:1.5b"
+    answer_model: str = field(default_factory=lambda: os.getenv("ANSWER_MODEL", "qwen2.5:1.5b"))
     answer_model_temperature: float = 0.3
     answer_model_top_p: float = 0.9
     

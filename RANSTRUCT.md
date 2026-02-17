@@ -1,6 +1,6 @@
 # RANSTRUCT 数据集生成过程
 
-根据这篇论文，RANSTRUCT 框架生成数据集的过程被称为“指令生成”（Instruction Generation），其核心利用了两个大语言模型（LLM）代理：一个用于生成问题，另一个用于生成答案。该过程基于 RAG（检索增强生成）原理，主要分为以下四个步骤：
+RANSTRUCT 框架生成数据集的过程被称为“指令生成”（Instruction Generation），其核心利用了两个大语言模型（LLM）代理：一个用于生成问题，另一个用于生成答案。该过程基于 RAG（检索增强生成）原理，主要分为以下四个步骤：
 
 1. 输入处理 (Input Processing)
 首先，框架处理两个主要的 O-RAN 数据源：
@@ -66,11 +66,10 @@ Ollama 模型存储路径为:'D:\Ollama\Models'，目前已经下载了Mistral-7
 
 ---
 
-## 幻觉抑制机制 (Hallucination Suppression)
-
+## 幻觉抑制机制 
 为了减少 RAG 系统中的幻觉问题，框架实现了以下三层防御机制：
 
-### 1. 置信度阈值过滤 (Confidence Thresholding)
+### 1. 置信度阈值过滤 
 
 - **配置项**: `min_retrieval_score` (默认 0.35)
 - **原理**: 如果 FAISS 检索结果的最高分数低于阈值，说明知识库中没有高相关性的文档，此时生成的答案很可能是幻觉
@@ -84,7 +83,7 @@ class FAISSConfig:
     enable_confidence_threshold: bool = True
 ```
 
-### 2. 实体一致性检查 (Entity Consistency Check)
+### 2. 实体一致性检查 
 
 - **原理**: O-RAN 领域有严格的接口归属关系（如 F1 只能在 CU-DU 之间，E1 只能在 CU-CP 和 CU-UP 之间）
 - **实现**: 定义 `ENTITY_CONSISTENCY_RULES` 规则表，在答案生成前后进行实体关系验证
@@ -100,7 +99,7 @@ ENTITY_CONSISTENCY_RULES = {
 }
 ```
 
-### 3. Cross-Encoder 重排序 (Reranker) 🆕
+### 3. Cross-Encoder 重排序  🆕
 
 **问题背景**: Bi-Encoder (FAISS) 虽然检索速度快，但对语义相似的不同概念区分度不够（如 "F1 interface" vs "E1 interface" 向量可能非常接近）
 
