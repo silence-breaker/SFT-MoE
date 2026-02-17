@@ -10,3 +10,5 @@
 [RANSTRUCT数据集生成流程解释](RANSTRUCT.md)
 
 [RANSTRUCT代码结构说明](ranstruct/README.md)
+
+[最终用自制数据集得到的基于Qwen3-30B-A3B-Instruct-2507微调的模型](https://huggingface.co/silence-breaker-wj/oran-30b/tree/main)
