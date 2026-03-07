@@ -1,4 +1,4 @@
-# SFT-ORAN-MoE
+# ORAN-SFT-MoE
 
 ## 重要文件介绍
 
@@ -12,3 +12,11 @@
 [RANSTRUCT代码结构说明](ranstruct/README.md)
 
 [最终用自制数据集得到的基于Qwen3-30B-A3B-Instruct-2507微调的模型](https://huggingface.co/silence-breaker-wj/oran-30b/tree/main)
+
+## 微调成果
+以Qwen3-30B-A3B-Instruct-2507为基础模型，使用oran_train.jsonl进行监督微调，得到的模型在oran_val_13K.jsonl上的表现如下：
+![alt text](image.png)
+
+实测模型表现：逻辑能力无损，在保持 O-RAN 领域专业性的同时，依然保留了通用的逻辑推理与对话能力
+
+![alt text](image-1.png)
